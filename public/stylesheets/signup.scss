@@ -1,0 +1,27 @@
+.closetBackground {  // background image on signup and login page
+  background-image: url('/images/biggestClosetPhoto.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 100vh;
+  background-position: center;
+}
+
+.companyLogoHeader {  // logo styling on signup page
+  width: 12.5vw;
+  height: 18.5vh;
+  margin-left: 43.3vw;
+  position: absolute;
+  border: 2px solid #00264d;
+}
+
+.signUpFirstView {  // form styling on signup page
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 35%;
+  border: 2px solid #00264d;
+  padding: 1%;
+  margin-top: 9.8vw;
+}

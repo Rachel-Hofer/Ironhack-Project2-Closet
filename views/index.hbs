@@ -1,6 +1,6 @@
-<div class="closetBackground">
+<div class="closetBackground">  {{!-- start of "body" baclground image tag --}}
 
-<nav id="header">
+<nav id="header">  {{!-- nav bar: some variation of this will show in every view --}}
       <div class="styleHeader">
         <a class="loginHere linkFeature" href="">About Us</a>
         <span class="seperators">  |  </span>
@@ -14,12 +14,13 @@
       </div>
 </nav>
 
-<img class="companyLogoHeader" src="/images/allWhiteLogo.png">
+<img class="companyLogoHeader" src="/images/allWhiteLogo.png">  {{!-- logo: positive absolute in this view only to create overlap --}}
 
-<div class="signUpFirstView formBackground">
+<div class="signUpFirstView formBackground">  {{!-- div that holds header of signup form and signup form --}}
 <h1 class="signUpTitle">Get Started Here...</h1>
 
-<form action="/signup" method="POST" enctype="multipart/form-data">
+<form action="/signup" method="POST" enctype="multipart/form-data">  {{!-- start of signup form --}}
+
   <div class="form-group">
     <label for="exampleInputPassword1">Username:</label>
     <input type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Create Username" name="username">
@@ -52,17 +53,16 @@
 
   <button type="submit" class="btn btn-primary moreButtonStyles">Sign-Up</button>
 
+</form>  {{!-- start of signup form --}}
 
-</form>
-
-</div>
+</div>  {{!-- end of div that holds header of signup form and signup form --}}
 
 
 {{#if message}}
 <h4>{{message}}</h4>
 {{/if}}
 
-</div>
+</div>  {{!-- end of "body" baclground image tag --}}
 
 
 
