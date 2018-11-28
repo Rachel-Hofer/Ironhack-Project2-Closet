@@ -24,7 +24,7 @@ require('./config/cloudinary'); // connects cloudinary.js file
 require('popper.js/dist/umd/popper');  // connects npm popper.js package
 
 // Mongoose connection
-mongoose.connect('process.env.MONGO_URI', {useNewUrlParser: true})
+mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -70,6 +70,10 @@ app.use(session({
 app.use(passport.initialize()); // 'turns on' the passport package
 app.use(passport.session());  // connects passport to the session you created
 
+// app.locals.closetBackground = '/images/biggestClosetPhoto.jpg'
+
+
+
 // connects all routes
 app.use('/', require('./routes/index'));
 app.use('/', require('./routes/users'));
@@ -77,5 +81,6 @@ app.use('/', require('./routes/clothing'));
 app.use('/', require('./routes/closets'));
 app.use('/', require('./routes/outfits'));
 app.use('/', require('./routes/clothingAPI'));
+
 
 module.exports = app;

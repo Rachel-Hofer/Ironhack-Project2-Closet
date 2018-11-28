@@ -1,7 +1,11 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #ffffff;
-  // background-image: url(/images/biggestClosetPhoto.jpg);
+  
+}
+
+.closetBackground {
+  background-image: url('/images/biggestClosetPhoto.jpg');
   background-repeat: no-repeat;
   background-size: contain;
   min-height: 100vh;

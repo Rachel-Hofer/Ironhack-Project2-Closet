@@ -1,5 +1,5 @@
 $(document).ready(function() { // when the document is loaded
-    $("body").css("background-image", "url('/images/biggestClosetPhoto.jpg')");
+  
 
 let tops;
 let bottoms;
@@ -64,10 +64,7 @@ $("#left_button_lower").click(function() {
     $("#theSelectedBottom").val(bottoms[bottomNum]._id)    
 })
 
-//on SUBMIT, hide background image
-$(".moreButtonStyles").submit(function() {
-    $("body").css("background-image", "url('')");
-})
+
 
 
 
