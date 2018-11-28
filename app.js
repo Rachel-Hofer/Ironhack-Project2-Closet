@@ -24,7 +24,7 @@ require('./config/cloudinary'); // connects cloudinary.js file
 require('popper.js/dist/umd/popper');  // connects npm popper.js package
 
 // Mongoose connection
-mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true})
+mongoose.connect('process.env.MONGO_URI', {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
