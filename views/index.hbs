@@ -1,6 +1,6 @@
 <div class="closetBackground">  {{!-- start of "body" baclground image tag --}}
 
-<nav id="header">  {{!-- nav bar: some variation of this will show in every view --}}
+<nav id="header">  {{!-- nav bar: some variation of this will show in every view. Wording/links will vary depending on the page --}}
       <div class="styleHeader">
         <a class="loginHere linkFeature" href="">About Us</a>
         <span class="seperators">  |  </span>
@@ -19,42 +19,43 @@
 <div class="signUpFirstView formBackground">  {{!-- div that holds header of signup form and signup form --}}
 <h1 class="signUpTitle">Get Started Here...</h1>
 
+{{!-- bootstrap form with personalized styling added --}}
 <form action="/signup" method="POST" enctype="multipart/form-data">  {{!-- start of signup form --}}
+{{!-- takes the action from the /signup POST route in users.js line 15 --}}
 
-  <div class="form-group">
+  <div class="form-group">  {{!-- div that holds username label/input of signup form --}}
     <label for="exampleInputPassword1">Username:</label>
     <input type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Create Username" name="username">
   </div>
 
-  <div class="form-group">
+  <div class="form-group">  {{!-- div that holds password label/input of signup form --}}
     <label for="exampleInputPassword1">Password:</label>
     <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
   </div>
 
-  <div class="form-group">
+  <div class="form-group">  {{!-- div that holds first name label/input of signup form --}}
     <label for="exampleInputPassword1">First Name:</label>
     <input type="text" class="form-control" id="exampleInputPassword1" placeholder="First Name" name="firstName">
   </div>
 
-    <div class="form-group">
+  <div class="form-group">  {{!-- div that holds last name label/input of signup form --}}
     <label for="exampleInputPassword1">Last Name:</label>
     <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Last Name" name="lastName">
   </div>
 
-    <div class="form-group">
+  <div class="form-group">  {{!-- div that holds e-mail label/input of signup form --}}
     <label for="exampleInputPassword1">E-mail:</label>
     <input type="text" class="form-control" id="exampleInputPassword1" placeholder="E-mail" name="userEmail">
   </div>
 
-  <div class="form-group">
-  <label for="exampleInputPassword1" name="image">Upload Image:</label><br>
-  <input type="file" name="path">
+  <div class="form-group">  {{!-- div that holds image label/input of signup form --}}
+    <label for="exampleInputPassword1" name="image">Upload Image:</label><br>
+    <input type="file" name="path">
   </div>
 
-  <button type="submit" class="btn btn-primary moreButtonStyles">Sign-Up</button>
+  <button type="submit" class="btn btn-primary moreButtonStyles">Sign-Up</button>  {{!-- button that SUBMITS the form--}}
 
-</form>  {{!-- start of signup form --}}
-
+</form>  {{!-- end of signup form --}}
 </div>  {{!-- end of div that holds header of signup form and signup form --}}
 
 
