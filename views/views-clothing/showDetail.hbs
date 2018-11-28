@@ -1,0 +1,35 @@
+<br>
+<button class="headButton"><a href="/profile">My Profile</a></button> {{!-- must be logged in --}}
+<br>
+
+    <img src="{{theSpecifics.image}}" width="275px">
+ <h6>Category:</h6> 
+    <h4>{{theSpecifics.category}}</h4>
+ <h6>Season:</h6> 
+    <h4>{{theSpecifics.season}}</h4>
+ <h6>Type:</h6> 
+    <h4>{{theSpecifics.type}}</h4>
+ <h6>Sub-Type:</h4> 
+    <h4>{{theSpecifics.subType}}</h4>
+ <h6>Color:</h4> 
+    <h4>{{theSpecifics.color}}</h4>
+ <h6>Size:</h4> 
+    <h4>{{theSpecifics.size}}</h4>
+ <h6>Dates Worn:</h4> 
+    <h4>{{theSpecifics.lastWorn}}</h4>
+
+  <form action="/clothing/{{theSpecifics._id}}/addDate" method="POST">
+    <div class="form-group">
+        <label for="exampleInputPassword1">New Date</label>
+        <input type="date" class="form-control" id="exampleInputPassword1" name="lastWorn">
+        <button>Add Date</button>
+    </div>
+  </form>
+
+
+
+
+
+
+
+

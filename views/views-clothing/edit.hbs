@@ -1,0 +1,112 @@
+<br>
+<button class="headButton"><a href="/profile">My Profile</a></button> {{!-- must be logged in --}}
+<br>
+
+<form action="/clothing/{{theClothing._id}}/update" method="POST" enctype="multipart/form-data">
+    <h3>Edit your Clothing</h3><br><br>
+
+{{!-- Image - String--}}
+
+<div class="form-group">
+    <img src="{{theClothing.image}}" width="125px">
+    <input type="file" name="path">
+  </div>
+
+
+{{!-- Clothing Category Dropdown --}}
+
+  <label class="my-1 mr-2" for="inlineFormCustomSelectPref" name="category">Clothing Category</label>
+  <select class="custom-select my-1 mr-sm-2" data-style="btn-info" name="category" >
+    <option selected value="{{theClothing.category}}">{{theClothing.category}}</option>
+    <option value="ActiveWear">Active Wear</option>
+    <option value="DayWear">Day Wear</option>
+    <option value="NightWear">Night Wear</option>
+    <option value="ProofessionalWear">Professional Wear</option>
+    <option value="FormalWear">Formal Wear</option>
+  </select>
+<br>
+
+
+{{!-- Seasons Dropdown --}}
+
+<label class="my-1 mr-2" for="inlineFormCustomSelectPref" name"category">Season</label>
+  <select class="custom-select my-1 mr-sm-2" data-style="btn-info" name="season">
+    <option selected value="{{theClothing.season}}">{{theClothing.season}}</option>
+    <option value="Winter">Winter</option>
+    <option value="Summer">Summer</option>
+    <option value="Spring">Spring</option>
+    <option value="Fall">Fall</option>
+  </select>
+<br>
+
+
+{{!-- Clothing Type Dropdown --}}
+
+  <label class="my-1 mr-2" for="inlineFormCustomSelectPref" name"category">Clothing Type</label>
+  <select class="custom-select my-1 mr-sm-2" data-style="btn-info" name="type">
+    <option selected value="{{theClothing.type}}">{{theClothing.type}}</option>
+    <option value="top">Top</option>
+    <option value="bottom">Bottom</option>
+    <option value="dress">Dress</option>
+  </select>
+<br>
+
+
+{{!-- Sub-Type - String --}}
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Clothing Sub-Type</label>
+    <input class="form-control" id="exampleInputEmail1" name="subType" value="{{theClothing.subType}}">
+  </div>
+
+
+{{!-- Color - String --}}
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Color</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" name="color" value="{{theClothing.color}}">
+  </div>
+
+
+{{!-- Size - Radio - not working --}}
+
+<p>Size</p>
+<div class="btn-group btn-group-toggle" data-toggle="buttons">
+  <label class="btn btn-secondary active">
+    <label class="btn btn-secondary" name="size">
+    <input type="radio" name="size" autocomplete="off" value="{{theClothing.size}}" checked> {{theClothing.size}}
+    </label>
+    <input type="radio" value="XS" name="size" autocomplete="off"> XS
+    </label>
+    <label class="btn btn-secondary">
+    <input type="radio" value="S" name="size" autocomplete="off"> S
+    </label>
+    <label class="btn btn-secondary">
+    <input type="radio" value="M" name="size" autocomplete="off"> M
+    </label>
+    <label class="btn btn-secondary">
+    <input type="radio" value="L" name="size" autocomplete="off"> L
+    </label>
+    <label class="btn btn-secondary">
+    <input type="radio" value="XL" name="size" autocomplete="off"> XL
+  </label>
+  </label>
+</div><br><br>
+
+
+{{!-- Last Worn - Date --}}
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Last Worn</label>
+    <input type="date" class="form-control" id="exampleInputPassword1" name="lastWorn" value="{{theClothing.lastWorn}}">
+  </div>
+<br>
+
+ <button type="submit" class="btn btn-primary">Submit Changes</button>
+
+</form>
+
+
+{{#if message}}
+<h4>{{message}}</h4>
+{{/if}}
