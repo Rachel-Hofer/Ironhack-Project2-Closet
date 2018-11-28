@@ -1,19 +1,44 @@
-<div class="closetBackground">  {{!-- start of "body" baclground image tag --}}
+<div class="closetBackground">  {{!-- start of "body" background image tag --}}
 
+<nav id="header">  {{!-- nav bar: some variation of this will show in every view. login page: About Us, Features, Contact Us --}}
+      <div class="styleHeader">
+        <a class="loginHere linkFeature" href="">About Us</a>
+        <span class="seperators">  |  </span>
+        <a class="loginHere linkFeature" href="">Features</a>
+        <span class="seperators">  |  </span>
+        <a class="loginHere linkFeature" href="">Contact Us</a>
+      </div>
+
+      <div class="styleLogin">  {{!-- redirects to sign-up page --}}
+        <p class="account-message addedStyle">Not yet a member?<br>
+        <a class="loginHere" href="/">Sign-Up Here</a></p>
+      </div>
+</nav>
+
+<img class="companyLogoHeader" src="/images/allWhiteLogo.png">  {{!-- logo: position absolute in signup/login view only: to create overlap --}}
+
+<div class="signUpFirstView formBackground">  {{!-- div that holds header of signup form and signup form --}}
+    <h1>Login</h1>
+
+{{!-- bootstrap form with personalized styling added --}}
 <form action="/login" method="POST">
-    <h3>Login</h3><br><br>
-  <div class="form-group">
+{{!-- takes the action from the /login POST route in users.js line 71 --}}
+
+  <div class="form-group">  {{!-- div that holds username label/input of login form --}}
     <label for="exampleInputEmail1">Username:</label>
     <input type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username" name="username" required>
     <small id="emailHelp" class="form-text text-muted">We will never share your email with anyone else.</small>
   </div>
-  <div class="form-group">
+
+  <div class="form-group">  {{!-- div that holds password label/input of login form --}}
     <label for="exampleInputPassword1">Password:</label>
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" required>
   </div>
-  <button type="submit" class="btn btn-primary">Login</button>
-</form>
 
+  <button type="submit" class="btn btn-primary moreButtonStyles">Login</button>  {{!-- button that SUBMITS the form--}}
+
+</form>  {{!-- end of login form --}}
+</div>  {{!-- end of div that holds header of signup form and signup form --}}
 
 
 

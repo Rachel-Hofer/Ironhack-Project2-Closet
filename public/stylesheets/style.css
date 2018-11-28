@@ -1,13 +1,22 @@
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #ffffff; }
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
-.closetBackground {
-  background-image: url("/images/biggestClosetPhoto.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  min-height: 100vh;
-  background-position: center; }
+#header {
+  display: flex;
+  margin-bottom: 1vh;
+  border-bottom: 2px solid #004d00;
+  background-color: #f6f6ef; }
+
+.addedStyle {
+  text-align: right;
+  padding-left: 66vw;
+  color: #00264d; }
+
+.addedStyleGreen {
+  text-align: right;
+  padding-left: 66vw;
+  color: #004d00;
+  font-weight: bold; }
 
 .clothingImg {
   width: 250px;
@@ -21,43 +30,8 @@ body {
 .inputStyle {
   margin-left: 48%; }
 
-.signUpFirstView {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-left: 35%;
-  border: 2px solid #00264d;
-  padding: 1%;
-  margin-top: 9.8vw; }
-
-#header {
-  display: flex;
-  margin-bottom: 1vh;
-  border-bottom: 2px solid #004d00;
-  background-color: #f6f6ef; }
-
 .topNavSettings {
   width: 10vw; }
-
-.companyLogoHeader {
-  width: 12.5vw;
-  height: 18.5vh;
-  margin-left: 43.3vw;
-  position: absolute;
-  border: 2px solid #00264d; }
-
-.addedStyle {
-  text-align: right;
-  padding-left: 66vw;
-  color: #00264d; }
-
-.addedStyleGreen {
-  text-align: right;
-  padding-left: 66vw;
-  color: #004d00;
-  font-weight: bold; }
 
 .moreButtonStyles {
   background-color: #00264d;

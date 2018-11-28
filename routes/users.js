@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 const passport = require('passport');
 const uploadCloud = require('../config/cloudinary');
 
-const User       = require('../models/User');
+const User = require('../models/User');
 
 // GET request to view Signup Page (/signup)
 router.get('/signup', (req, res, next) => {
@@ -26,9 +26,6 @@ router.get('/signup', (req, res, next) => {
             userEmail: req.body.userEmail,
             image: req.file.url
            };
-
-    console.log("<><><><><><><><>", req.file)
-    console.log("!!!!!!!!!!!!!!!!", req.body.username)
 
     if(username === "" || password === "") {
         res.render("views-user/signup", { message: "Indicate username and password" });
