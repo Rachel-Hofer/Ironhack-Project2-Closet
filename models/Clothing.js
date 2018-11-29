@@ -3,7 +3,7 @@ const Schema   = mongoose.Schema;
 
 
 const clothingSchema = new Schema({
-    category: {type: String, aenum: ['ActiveWear', 'DayWear', 'NightWear', 'ProfessionalWear', 'FormalWear']},
+    category: {type: String, enum: ['ActiveWear', 'DayWear', 'NightWear', 'ProfessionalWear', 'FormalWear']},
     season: {type: String, enum: ['Winter', 'Spring', 'Summer', 'Fall']},
     type: {type: String, enum: ['top', 'bottom', 'dress']},
     subType: String,

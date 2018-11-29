@@ -8,6 +8,49 @@
   margin-left: 47vw;
   text-align: right; }
 
+.menuDefaultDropdownStyles {
+  border-color: #00264d;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 0; }
+
+.menuDefaultAddOns {
+  background-color: #ecf2f9;
+  margin: 0;
+  border: 0; }
+
+.topLinkAddOns {
+  padding-top: 1.5vh;
+  padding-bottom: 1vh; }
+
+.bottomLinkAddOns {
+  border-bottom: 1px solid #00264d;
+  padding-top: 1vh;
+  padding-bottom: 2vh; }
+
+.dropDownHoverDefault:hover {
+  background-color: #ffffff;
+  color: #00264d;
+  font-size: 18px;
+  font-weight: bold; }
+
+.logoutAddOns {
+  background-color: #ecf2f9;
+  padding-top: 1.5vh;
+  padding-bottom: 2vh;
+  border-bottom: 1px solid #00264d;
+  border-radius: .25rem; }
+
+.logoutAddOns:hover {
+  background-color: #ecf2f9;
+  color: #00264d;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 1.5vh;
+  padding-bottom: 2vh;
+  border-bottom: 1px solid #00264d;
+  border-radius: .25rem; }
+
 .coloredLink {
   color: #ffffff;
   padding-top: 1vh;
@@ -17,13 +60,44 @@
 
 .coloredLink:hover {
   background-color: #00264d;
-  border: 1px solid #00264d;
-  color: #ffffff; }
+  border: 1px solid #00264d; }
 
 .coloredLink:link {
   color: #ffffff; }
 
 .coloredLink:visited {
   color: #ffffff; }
+
+.userHomeRowOnePicLinks {
+  display: flex;
+  justify-content: space-evenly; }
+
+.userHomeDivBorder {
+  border: 3px solid #00264d;
+  min-width: 23%;
+  min-height: 260px;
+  width: 23; }
+
+.myClosetDiv {
+  background-image: url("/images/biggerCloset.png");
+  position: relative;
+  min-width: 23%;
+  min-height: 254px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  width: 130%; }
+
+.myOutfitsDiv {
+  background-image: url("/images/biggerCloset.png");
+  position: relative;
+  min-width: 23%;
+  min-height: 254px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  width: 130%; }
 
 /*# sourceMappingURL=profile.css.map */

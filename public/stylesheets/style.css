@@ -21,6 +21,12 @@ body {
 .formButtonStyle {
   background-color: #00264d;
   border: 1px solid #00264d;
-  color: #ffffff; }
+  color: #ffffff;
+  opacity: 1;
+  filter: alpha(opacity=100); }
+
+.defaultButtonHover:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50); }
 
 /*# sourceMappingURL=style.css.map */

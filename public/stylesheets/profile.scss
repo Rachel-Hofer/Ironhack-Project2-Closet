@@ -4,20 +4,70 @@
 //     hbs: views-closet/home.hbs
 // <><><><><><><><><><><><><><><><><>
 
-.fourLinkSpacing {  // width change for links on left side in nav bar - use class for any view with 4 links
+.fourLinkSpacing {  // width change for links on left side of nav bar - use class for any nav with 4 links
   width: 12vw;
 }
 
- .styleHeaderProfile {
+ .styleHeaderProfile {  // expanding 4 links div to fit all links in one line - use class for any view with 4 links
   width: 40vw;
  }
 
- .styleLoginProfile {
+ .styleLoginProfile {  // div that holds the "menu" button/dropdown menu - will use for any nav with 4 links
   margin-left: 47vw;
   text-align: right;
  }
 
- .coloredLink {
+ .menuDefaultDropdownStyles {  // customized dropdown styling - additional styling to bootstrap
+  border-color: #00264d; 
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 0;
+ }
+
+ .menuDefaultAddOns {  // customized dropdown styling - additional styling to bootstrap
+   background-color: #ecf2f9;
+   margin: 0;
+   border: 0;
+ }
+
+ .topLinkAddOns {  // customized dropdown styling - additional styling to bootstrap
+  padding-top: 1.5vh;
+  padding-bottom: 1vh;
+ }
+
+ .bottomLinkAddOns {  // customized dropdown styling - additional styling to bootstrap
+   border-bottom: 1px solid #00264d;
+   padding-top: 1vh;
+   padding-bottom: 2vh;
+ }
+ 
+ .dropDownHoverDefault:hover {
+  background-color: #ffffff;
+  color: #00264d;
+  font-size: 18px;
+  font-weight: bold;
+ }
+
+ .logoutAddOns {  // customized dropdown styling - additional styling to bootstrap
+  background-color: #ecf2f9;
+  padding-top: 1.5vh;
+  padding-bottom: 2vh;
+  border-bottom: 1px solid #00264d;
+  border-radius: .25rem;
+ }
+
+ .logoutAddOns:hover {  // customized dropdown styling - additional styling to bootstrap
+  background-color: #ecf2f9;
+  color: #00264d;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 1.5vh;
+  padding-bottom: 2vh;
+  border-bottom: 1px solid #00264d;
+  border-radius: .25rem;
+ }
+
+ .coloredLink {  // customized dropdown styling - additional styling to bootstrap
   color: #ffffff;
   padding-top: 1vh;
   padding-bottom: 1vh;
@@ -25,16 +75,52 @@
   margin-bottom: 1.5vh;
  }
 
- .coloredLink:hover {
+ .coloredLink:hover {  // customized dropdown styling - additional styling to bootstrap
   background-color: #00264d;
   border: 1px solid #00264d;
-  color: #ffffff;
  }
 
- .coloredLink:link {
+ .coloredLink:link {  // customized dropdown styling - additional styling to bootstrap
   color: #ffffff;
 }
 
- .coloredLink:visited {
+ .coloredLink:visited {  // customized dropdown styling - additional styling to bootstrap
   color: #ffffff;
+ }
+
+ .userHomeRowOnePicLinks {
+    display: flex;
+    justify-content: space-evenly;
+
+ }
+
+ .userHomeDivBorder {
+  border: 3px solid #00264d;
+  min-width: 23%;
+  min-height: 260px;
+  width: 23;
+ }
+
+ .myClosetDiv {
+   background-image: url('/images/biggerCloset.png');
+   position: relative;
+   min-width: 23%;
+   min-height: 254px;
+   background-repeat: no-repeat;
+   background-size: contain;
+   filter: alpha(opacity=50);
+   opacity: 0.5;
+   width: 130%;
+ }
+
+ .myOutfitsDiv{
+  background-image: url('/images/biggerCloset.png');
+  position: relative;
+  min-width: 23%;
+  min-height: 254px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  width: 130%;
  }

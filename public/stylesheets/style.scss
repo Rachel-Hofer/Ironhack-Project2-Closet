@@ -27,10 +27,17 @@ body {  // font for all pages
   font-weight: bold;
 }
 
-.formButtonStyle {  // "default" button for all pages - additional styling to bootstrap
+.formButtonStyle {  // customized button for all pages - additional styling to bootstrap
   background-color: #00264d;
   border: 1px solid #00264d;
   color: #ffffff;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.defaultButtonHover:hover {  // customized hover for all pages - additional styling to bootstrap
+  opacity: 0.5;
+  filter: alpha(opacity=50)
 }
 
 
