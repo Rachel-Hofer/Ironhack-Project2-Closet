@@ -1,0 +1,12 @@
+.profilePic {
+  display: flex;
+  justify-content: center; }
+
+.profilePicSize {
+  width: auto;
+  height: 40vh; }
+
+.profileFormUpdated {
+  width: 31%; }
+
+/*# sourceMappingURL=userProfile.css.map */

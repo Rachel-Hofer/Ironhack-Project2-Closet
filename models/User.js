@@ -20,14 +20,3 @@ const User = mongoose.model("User", userSchema);
 
 module.exports = User;
 
-
-// 1. User-
-//     - Username: String
-//     - Password: String
-        
-//         User Profile
-//         - First Name: String
-//         - Last Name: String
-//         - E-mail Address: String
-//         - Image: URL String
-//         - Closets: [Array of closet IDs]

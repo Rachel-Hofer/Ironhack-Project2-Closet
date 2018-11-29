@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "userProfile.css",
+	"sources": [
+		"userProfile.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,WAAW,CAAC;EACV,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM,GACxB;;AAED,AAAA,eAAe,CAAC;EACd,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI,GACb;;AAED,AAAA,mBAAmB,CAAC;EAClB,KAAK,EAAE,GAAG,GACX"
+}
