@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "closet.css",
+	"sources": [
+		"closet.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,YAAY,CAAC;EACX,KAAK,EAAE,KAAK;EACZ,WAAW,EAAE,GAAG,GACjB;;AAED,AAAA,IAAI,CAAC;EACH,gBAAgB,EAAE,OAAO;EACzB,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,GAAG,GACZ"
+}

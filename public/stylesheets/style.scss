@@ -1,6 +1,7 @@
-// <><><><><><><><><><><><><><><><><><><>
-//     CSS: when needed for ALL views
-// <><><><><><><><><><><><><><><><><><><>
+// <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+//     CSS: needed for ALL views
+//     includes: default formatting, my default style additions to bootstrap
+// <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 
 body {  // font for all pages
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -15,10 +16,6 @@ body {  // font for all pages
   padding-left: 1vw;
   border-bottom: 2px solid #004d00;
 }
-
-// .seperators {  // styling for | seperators between links on left side of nav bar
-//   margin-right: 1.5vw;
-//   }
 
 .defaultNavLabelStyle:link {  // styling for links on left side in nav bar on all pages
   color: #004d00;

@@ -1,8 +1,14 @@
-// <><><><><><><><><><><><><><>
+// <><><><><><><><><><><><><><><><>
 //     CSS: for LOGIN view
-// <><><><><><><><><><><><><><>
+//     url: (/login)
+//     hbs: views-user/login.hbs
+// <><><><><><><><><><><><><><><><>
 
 .styleLoginLogin {  // left-margin for "signup" section of login page
   margin-left: 69vw;
   text-align: right;
+}
+
+.formStylingAdditionToDefault {  // addition to "default AND bootstrap styling on login forms
+  height: 58vh;
 }

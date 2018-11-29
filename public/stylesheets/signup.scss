@@ -1,5 +1,7 @@
 // <><><><><><><><><><><><><><>
-//     CSS: for SIGNUP view
+//     CSS: for SIGNUP view 
+//     url: (/)
+//     hbs: index.hbs
 // <><><><><><><><><><><><><><>
 
 .closetBackground {  // background image on signup and login page
@@ -19,7 +21,7 @@
   text-align: right;
 }
 
-.addedStyle {  // additional styling to right side of top nav bar on signup and login page
+.addedStyle {  // additional styling to right side of top nav bar on signup/login page
   color: #00264d;
   margin-top: 1vh;
  }
@@ -32,7 +34,7 @@
   border: 2px solid #00264d;
 }
 
-.signUpFirstView {  // form styling on signup page
+.formStylingDefault {  // addition to bootstrap styling on signup/login forms
   width: 30%;
   display: flex;
   flex-direction: column;
@@ -42,6 +44,7 @@
   border: 2px solid #00264d;
   padding: 1%;
   margin-top: 9.8vw;
+  background-color: #ecf2f9;
 }
 
 

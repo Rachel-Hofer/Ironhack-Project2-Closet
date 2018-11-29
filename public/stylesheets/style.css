@@ -18,29 +18,8 @@ body {
   color: #004d00;
   font-weight: bold; }
 
-.clothingImg {
-  width: 250px;
-  margin-left: 20%; }
-
-.red {
-  background-color: red;
-  width: 4vw;
-  height: 6vh; }
-
-.inputStyle {
-  margin-left: 48%; }
-
-.moreButtonStyles {
+.formButtonStyle {
   background-color: #00264d;
   border: 1px solid #00264d; }
-
-.linkFeature {
-  width: 6vw; }
-
-.seperators {
-  margin-right: 1.5vw; }
-
-.formBackground {
-  background-color: #ecf2f9; }
 
 /*# sourceMappingURL=style.css.map */
