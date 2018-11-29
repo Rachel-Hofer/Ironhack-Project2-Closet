@@ -24,65 +24,80 @@
 
 {{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
 
-<div class="formStylingDefaultEdit">
-
+<div class="list-group formStylingDefaultEdit">
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+    </div>
     <img src="{{theSpecifics.image}}" width="275px">
+  </a>
 
-  <div class="form-group">
-    <label for="exampleInputEmail1">Category:</label>
-    <p class="">{{theSpecifics.category}}</p>
-  </div>
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Category:</h5>
+    </div>
+    <p class="mb-1">{{theSpecifics.category}}</p>
+  </a>
 
-  <div class="form-group">
-    <label for="exampleInputEmail1">Season:</label>
-    <p class="">{{theSpecifics.season}}</p>
-  </div>
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Season:</h5>
+    </div>
+    <p class="mb-1">{{theSpecifics.season}}</p>
+  </a>
 
-  <div class="form-group">
-    <label for="exampleInputEmail1">Type:</label>
-    <p class="">{{theSpecifics.type}}</p>
-  </div>
+    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Type:</h5>
+    </div>
+    <p class="mb-1">{{theSpecifics.type}}</p>
+  </a>
 
-  <div class="form-group">
-    <label for="exampleInputEmail1">Clothing Sub-Type:</label>
-    <p class="">{{theSpecifics.category}}</p>
-  </div>
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Short Description:</h5>
+    </div>
+    <p class="mb-1">{{theSpecifics.subType}}</p>
+  </a>
 
-  <div class="form-group">
-    <label for="exampleInputEmail1">Clothing Sub-Type:</label>
-    <p class="">{{theSpecifics.category}}</p>
-  </div>
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Color:</h5>
+    </div>
+    <p class="mb-1">{{theSpecifics.color}}</p>
+  </a>
 
+    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Size:</h5>
+    </div>
+    <p class="mb-1">{{theSpecifics.size}}</p>
+  </a>
 
- <h6>Season:</h6> 
-    <h4></h4>
- <h6>Type:</h6> 
-    <h4>{{theSpecifics.type}}</h4>
- <h6>Sub-Type:</h4> 
-    <h4>{{theSpecifics.subType}}</h4>
- <h6>Color:</h4> 
-    <h4>{{theSpecifics.color}}</h4>
- <h6>Size:</h4> 
-    <h4>{{theSpecifics.size}}</h4>
- <h6>Dates Worn:</h4> 
-    <h4>{{theSpecifics.lastWorn}}</h4>
-
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Dates Worn:</h5>
+    </div>
+    <p class="mb-1">{{theSpecifics.dateWorn}}</p>
+  </a>
 
 <div class="clothingDetailFooter">
-      <a href="/updateOutfit">
-      <button type="button" class="btn btn-primary formButtonStyle">Edit</button>  
-      </a>
-
       <form action="/clothing/{{theSpecifics._id}}/addDate" method="POST">
-         <div class="form-group">
-            <label for="exampleInputPassword1">New Date</label>
+         <div class="form-group dateDiv">
             <input type="date" class="form-control" id="exampleInputPassword1" name="lastWorn">
-            <button class="btn btn-primary formButtonStyle">Add Date</button>
+            <button type="button" class="btn btn-primary formButtonStyle dateButtonAddOns">Add Date</button>
          </div>
       </form>
+
+      <a href="/updateOutfit">
+         <button type="button" class="btn btn-primary formButtonStyle">Edit this Item</button>  
+      </a>
+
 </div>
 
 </div>
+
+
+
 
 
 

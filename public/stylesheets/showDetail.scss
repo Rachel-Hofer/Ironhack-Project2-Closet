@@ -6,4 +6,19 @@
 
 .clothingDetailFooter {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dateDiv {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dateButtonAddOns {
+  margin-top: 2%;
+  width: 46%;
 }
