@@ -1,5 +1,5 @@
 <nav id="header">
-      <div class="styleHeaderProfile">
+    <div class="styleHeaderProfile">
         <a class="defaultNavLabelStyle fourLinkSpacing" href="/closet">My Closet</a>
           <span class="seperators">|</span>
         <a class="defaultNavLabelStyle fourLinkSpacing" href="">My Outfits</a>
@@ -7,12 +7,19 @@
         <a class="defaultNavLabelStyle fourLinkSpacing" href="">Style Inspo</a>
           <span class="seperators">|</span>
         <a class="defaultNavLabelStyle fourLinkSpacing" href="">My Style Calandar</a>
-      </div>
+    </div>
 
-      <div class="styleLoginProfile">
-        <p class="addedStyle">Dropdown Menu<br>
-        <a class="defaultNavLabelStyle" href="/logout">Logout, {{user.firstName}}</a></p>
-      </div>
+    <div class="styleLoginProfile">
+        <div class="btn-group">
+          <button type="button" class="btn dropdown-toggle addedStyle formButtonStyle coloredLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{user.firstName}}'s Menu</button>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="/profile">{{user.firstName}}'s Profile</a>
+              <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/">Logout</a>
+            </div>
+        </div>
+    </div>
 </nav>
 
 

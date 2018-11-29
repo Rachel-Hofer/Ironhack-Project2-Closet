@@ -8,6 +8,18 @@
   margin-left: 47vw;
   text-align: right; }
 
+.coloredLink {
+  color: #ffffff;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh; }
+
+.coloredLink:hover {
+  background-color: #00264d;
+  border: 1px solid #00264d;
+  color: #ffffff; }
+
 .coloredLink:link {
   color: #ffffff; }
 
