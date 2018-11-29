@@ -1,19 +1,37 @@
+.centerBothCarasouls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.topImageTwoCarasouls {
+  width: 300px;
+  height: 35vh; }
+
+.bottomImageTwoCarasouls {
+  width: 300px;
+  height: 35vh; }
+
+.carasoulWidthChange {
+  width: 65%; }
+
 #bottomsDiv {
   display: flex;
   justify-content: center;
-  margin-bottom: 2%; }
+  margin-bottom: .5%; }
 
 .centerCreateOutfitButton {
   display: flex;
   justify-content: center;
-  margin-bottom: 2%; }
+  margin-bottom: .5%; }
 
 .createOutfitButtonAdditions {
   margin-bottom: 3%; }
 
 .detailsButtonOnCarasoul {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin-bottom: 1.5%; }
 
 .createOutfitDetailsAddiitons {
   margin-right: 2%; }
@@ -25,9 +43,9 @@
   justify-content: center; }
 
 .outfitAddDateInput {
-  width: 10%; }
+  width: 9%; }
 
 .outfitAddDateLabel {
-  width: 20%; }
+  width: 18%; }
 
 /*# sourceMappingURL=createOutfit.css.map */

@@ -5,7 +5,7 @@ const uploadCloud = require('../config/cloudinary');
 const Outfits = require("../models/Outfit");
 const Clothing = require("../models/Clothing");
 
-// GET request to show /createClothing page
+// GET request to show /createOutfit page
 router.get('/createOutfit', (req, res, next) => {
   res.render('views-outfit/createOutfit');
 });

@@ -4,9 +4,9 @@
 //     hbs: views-closet/home.hbs
 // <><><><><><><><><><><><><><><><><>
 
-.clothingImg {  // styling of images on carasoul of closet/createOutfit page
+.imageOneCarasoul {  // // sizing of image on closet page
   width: 300px;
-  min-height: 35vh;
+  height: 35vh;
 }
 
 .navArrows {  // arrows on carasoul of closet/createOutfit page
@@ -34,6 +34,7 @@
 #topsDiv {  // centers TOPS image
   display: flex;
   justify-content: center;
+  height: 30vh;
 }
 
 #carasoulButtonCollectionDiv {  // button styling on carasoul of closet page ONLY

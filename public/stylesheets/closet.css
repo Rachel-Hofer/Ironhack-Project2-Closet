@@ -1,6 +1,6 @@
-.clothingImg {
+.imageOneCarasoul {
   width: 300px;
-  min-height: 35vh; }
+  height: 35vh; }
 
 .navArrows {
   background-color: #00264d;
@@ -23,7 +23,8 @@
 
 #topsDiv {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  height: 30vh; }
 
 #carasoulButtonCollectionDiv {
   display: flex;
