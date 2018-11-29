@@ -5,7 +5,6 @@ const uploadCloud = require('../config/cloudinary');
 const Clothing = require("../models/Clothing");
 
 
-
 // Takes you to the initial Clothing page (/clothing)
 router.get('/clothing', (req, res, next) => {
   res.render('views-clothing/create');

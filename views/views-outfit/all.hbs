@@ -8,5 +8,8 @@
   <img src="{{this.bottom.image}}"> <br><br><br><br><br> 
   </div>
 
-
   {{/each}}
+
+  <form action="/createOutfit" method="POST" enctype="multipart/form-data">
+  <button type="submit" class="btn btn-primary formButtonStyle">Create New Outfit</button>  
+  </form>

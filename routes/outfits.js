@@ -5,7 +5,12 @@ const uploadCloud = require('../config/cloudinary');
 const Outfits = require("../models/Outfit");
 const Clothing = require("../models/Clothing");
 
-// POST request to create a new outfit (2 articles of clothing"
+// GET request to show /createClothing page
+router.get('/createOutfit', (req, res, next) => {
+  res.render('views-outfit/createOutfit');
+});
+
+// POST request to create a new outfit (2 articles of clothing)
 router.post('/createOutfit', uploadCloud.single('path') , (req, res, next) => {
   
   const newOutfit= {
@@ -22,13 +27,12 @@ router.post('/createOutfit', uploadCloud.single('path') , (req, res, next) => {
 
   Outfits.create(newOutfit)  
     .then(()=>{
-      res.redirect('/myOutfits')
+      res.redirect('/createOutfit')
     })
     .catch((err)=> {
       next((err))
     })
 })
-
 
 
 // GET request to see the "View Outfits Page"

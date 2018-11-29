@@ -1,0 +1,123 @@
+<nav class="userHomeHeaderAddOns" id="header">  {{!-- start of top nav --}}
+    <div class="styleHeaderProfile">
+        <a class="defaultNavLabelStyle fourLinkSpacing" href="/closet">My Closet</a>
+          <span class="seperators">|</span>
+        <a class="defaultNavLabelStyle fourLinkSpacing" href="/myOutfits">My Outfits</a>
+          <span class="seperators">|</span>
+        <a class="defaultNavLabelStyle fourLinkSpacing" href="">Style Inspo</a>
+          <span class="seperators">|</span>
+        <a class="defaultNavLabelStyle fourLinkSpacing" href="">My Style Calandar</a>
+    </div>
+
+    <div class="styleLoginProfile">
+        <div class="btn-group">
+          <button type="button" class="btn dropdown-toggle addedStyle formButtonStyle coloredLink defaultButtonHover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{user.firstName}}'s Menu</button>
+            <div class="dropdown-menu dropdown-menu-right menuDefaultDropdownStyles">
+              <a class="dropdown-item topLinkAddOns dropDownHoverDefault" href="/userHome">{{user.firstName}}'s Home</a>
+              <a class="dropdown-item bottomLinkAddOns dropDownHoverDefault" href="/profile">{{user.firstName}}'s Profile</a>
+                  <div class="dropdown-divider menuDefaultAddOns"></div>
+              <a class="dropdown-item logoutAddOns" href="/">Logout</a>
+            </div>
+        </div>
+    </div>
+</nav>  {{!-- end of top nav --}}
+
+
+{{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
+
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">   {{!-- start of BOTH carasouls --}}
+  <div id="toManipulate" class="carousel-inner">
+
+
+{{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
+
+
+    <div class="forLoopClass carousel-item active">  {{!-- start of TOP carasoul --}}
+
+    <a id="left_button" class= "navArrows carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+
+<div id="topsDiv">
+  <span id="theImageHolder" class="clothingImg"></span>
+</div>
+      
+    <div id="carasoulButtonCollectionDiv">
+            <a id="right_button" class="navArrows carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+    </div>
+
+</div>  {{!-- end of TOP carasoul --}}
+
+
+{{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
+
+    
+<div class="forLoopClass carousel-item active">
+
+    <a id="left_button" class= "navArrows carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+
+<div id="bottomsDiv">  
+  <span id="theImageHolder2" class="clothingImg"> </span>
+</div>
+
+    <div id="carasoulButtonCollectionDiv">
+            <a id="right_button_lower" class="navArrows carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+    </div>
+
+</div>  {{!-- end of BOTTOMS carasoul --}}
+
+
+{{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
+
+
+</div>
+</div>  {{!-- end of BOTH carasouls --}}
+
+
+{{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
+
+
+<div class="centerCreateOutfitButton">  {{!-- POST route for creating new outfits --}}
+  <form id="outfitCreated" action="/createOutfit" method="POST"> 
+      <input type="hidden" id="theSelectedTop" name="theTop">
+      <input type="hidden" id="theSelectedBottom" name="theBottom">
+        <button class="btn formButtonStyle defaultButtonHover">Add this Outfit</button>
+  </form>
+</div>
+
+{{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
+
+
+      <div class="detailsButtonOnCarasoul">  {{!-- start of BOTH details buttons --}}
+          <button type="button" class="btn formButtonStyle defaultButtonHover createOutfitDetailsAddiitons">
+            <a id="topDetail" class="coloredLink" href="/clothing/{{theSpecifics._id}}">Top Details</a>
+          </button>
+
+          <button type="button" class="btn formButtonStyle defaultButtonHover">
+            <a id="bottomDetail" class="coloredLink" href="/clothing/{{theSpecifics._id}}">Bottom Details</a>
+          </button>
+      </div>  {{!-- end of BOTH details buttons --}}
+
+
+{{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
+
+
+  <div class="form-group outfitAddDate">
+    <label class="outfitAddDateLabel" for="exampleInputPassword1">Never lose track of when you wear what! Tag this outfit to your "Style" Calendar now.</label>
+    <input class="outfitAddDateInput" type="date" class="form-control" id="exampleInputPassword1" name="lastWorn" value="{{theClothing.lastWorn}}">
+  </div>
+
+
+
+

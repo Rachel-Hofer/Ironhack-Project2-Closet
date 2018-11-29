@@ -1,6 +1,5 @@
 $(document).ready(function() { // when the document is loaded
   
-
 let tops;
 let bottoms;
 let topNum = 0;
@@ -25,7 +24,7 @@ axios.get('http://localhost:3000/api/clothing/top')
 //TOPS carasoul right click
 $("#right_button").click(function() {
 
-    $('#theImageHolder').html(`<img class="clothingImg" src="${tops[topNum].image}">`)
+    $('#theImageHolder').html(`<img class="clothingImg" src="${tops[topNum].image}" width="150px">`)
     $("#topDetail").prop("href", `/clothing/${tops[topNum]._id}`)
     $("#topEdit").prop("href", `/clothing/${tops[topNum]._id}/update`)
     $("#topDelete").prop("href", `/clothing/${tops[topNum]._id}/delete`)
@@ -36,7 +35,7 @@ $("#right_button").click(function() {
 //BOTTOMS carasoul right click
 $("#right_button_lower").click(function() {
   
-    $('#theImageHolder2').html(`<img class="clothingImg" src="${bottoms[bottomNum].image}">`)
+    $('#theImageHolder2').html(`<img class="clothingImg" src="${bottoms[bottomNum].image}" width="150px">`)
     $("#bottomDetail").prop("href", `/clothing/${bottoms[bottomNum]._id}`)
     $("#bottomEdit").prop("href", `/clothing/${bottoms[bottomNum]._id}/update`)
     $("#bottomDelete").prop("href", `/clothing/${bottoms[bottomNum]._id}/delete`)
@@ -47,7 +46,7 @@ $("#right_button_lower").click(function() {
 //TOPS carasoul left click
 $("#left_button").click(function() {
     topNum--;
-    $('#theImageHolder').html(`<img class="clothingImg" src="${tops[topNum].image}">`)
+    $('#theImageHolder').html(`<img class="clothingImg" src="${tops[topNum].image}" width="150px">>`)
     $("#topDetail").prop("href", `/clothing/${tops[topNum]._id}`)
     $("#topEdit").prop("href", `/clothing/${tops[topNum]._id}/update`)
     $("#topDelete").prop("href", `/clothing/${tops[topNum]._id}/delete`)
@@ -57,7 +56,7 @@ $("#left_button").click(function() {
 //BOTTOMS carasoul left click
 $("#left_button_lower").click(function() {
     bottomNum--;
-    $('#theImageHolder2').html(`<img class="clothingImg" src="${bottoms[bottomNum].image}">`)
+    $('#theImageHolder2').html(`<img class="clothingImg" src="${bottoms[bottomNum].image}" width="150px">`)
     $("#bottomDetail").prop("href", `/clothing/${bottoms[bottomNum]._id}`)
     $("#bottomEdit").prop("href", `/clothing/${bottoms[bottomNum]._id}/update`)
     $("#bottomDelete").prop("href", `/clothing/${bottoms[bottomNum]._id}/delete`)

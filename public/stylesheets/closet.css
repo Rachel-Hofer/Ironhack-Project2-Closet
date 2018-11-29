@@ -1,6 +1,6 @@
 .clothingImg {
-  width: 250px;
-  margin-left: 20%; }
+  width: 300px;
+  min-height: 35vh; }
 
 .navArrows {
   background-color: #00264d;
@@ -15,5 +15,25 @@
   height: 6vh;
   filter: alpha(opacity=50);
   opacity: 0.5; }
+
+.closetLargeCarousel {
+  margin-top: 13%;
+  margin-left: 17%;
+  width: 60%; }
+
+#topsDiv {
+  display: flex;
+  justify-content: center; }
+
+#carasoulButtonCollectionDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+
+#carasoulButtonCollectionDivBoth {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5%; }
 
 /*# sourceMappingURL=closet.css.map */

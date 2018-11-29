@@ -1,0 +1,45 @@
+// <><><><><><><><><><><><><><><><><><><><><>
+//     CSS: for CREATE outfit view 
+//     url: (/createOutfit)
+//     hbs: views-outfit/createOutfit.hbs
+// <><><><><><><><><><><><><><><><><><><><><>
+
+#bottomsDiv {  // centers BOTTOMS image
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2%;
+} 
+
+.centerCreateOutfitButton {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2%;
+}
+
+.createOutfitButtonAdditions {
+  margin-bottom: 3%;
+}
+
+.detailsButtonOnCarasoul {
+  display: flex;
+  justify-content: center;
+}
+
+.createOutfitDetailsAddiitons {
+  margin-right: 2%;
+}
+
+.outfitAddDate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.outfitAddDateInput {
+  width: 9%;
+}
+
+.outfitAddDateLabel {
+  width: 18%;
+}

@@ -1,9 +1,15 @@
-.clothingImg {  // styling of images in carasoul of closet page - WILL BE USED FOR CREATE OUTFITS PAGE ALSO
-  width: 250px;
-  margin-left: 20%;
+// <><><><><><><><><><><><><><><><><>
+//     CSS: for CLOSET view 
+//     url: (/closet)
+//     hbs: views-closet/home.hbs
+// <><><><><><><><><><><><><><><><><>
+
+.clothingImg {  // styling of images on carasoul of closet/createOutfit page
+  width: 300px;
+  min-height: 35vh;
 }
 
-.navArrows {  // arrows on carasoul of closet page - WILL BE USED FOR CREATE OUTFITS PAGE ALSO
+.navArrows {  // arrows on carasoul of closet/createOutfit page
   background-color: #00264d;
   width: 4vw;
   height: 6vh;
@@ -11,10 +17,34 @@
   opacity: 1;
 }
 
-.navArrows:hover {  // arrows on carasoul of closet page - WILL BE USED FOR CREATE OUTFITS PAGE ALSO
+.navArrows:hover {  // arrows:hover on carasoul of closet/createOutfit page
   background-color: #00264d;
   width: 4vw;
   height: 6vh;
   filter: alpha(opacity=50);
   opacity: 0.5;
+}
+
+.closetLargeCarousel {  // sizing when only ONE carasoul is on page
+  margin-top: 13%;
+  margin-left: 17%;
+  width: 60%;
+}
+
+#topsDiv {  // centers TOPS image
+  display: flex;
+  justify-content: center;
+}
+
+#carasoulButtonCollectionDiv {  // button styling on carasoul of closet page ONLY
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#carasoulButtonCollectionDivBoth {  // "details" buttons on BOTH carasouls of closet/createOutfit page
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5%;
 }
