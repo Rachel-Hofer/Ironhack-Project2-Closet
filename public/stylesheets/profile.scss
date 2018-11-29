@@ -4,13 +4,23 @@
 //     hbs: views-closet/home.hbs
 // <><><><><><><><><><><><><><><><><>
 
-.threeLinkSpacing {  // width change for links on left side in nav bar - use class for any view with 4 links
-  width: 10vw;
+.fourLinkSpacing {  // width change for links on left side in nav bar - use class for any view with 4 links
+  width: 12vw;
 }
 
-.addedStyleProfile {  // additional styling to right side of top nav bar on profile page
+ .styleHeaderProfile {
+  width: 40vw;
+ }
+
+ .styleLoginProfile {
+  margin-left: 47vw;
   text-align: right;
-  margin-left: 64vw;
-  color: #004d00;
-  font-weight: bold;
+ }
+
+ .coloredLink:link {
+  color: #ffffff;
+}
+
+ .coloredLink:visited {
+  color: #ffffff;
  }

@@ -1,22 +1,3 @@
-<nav id="header">
-      <div class="styleHeader">
-        <a class="defaultNavLabelStyle fourLinkSpacing" href="">My Closet</a>
-          <span class="seperators">|</span>
-        <a class="defaultNavLabelStyle fourLinkSpacing" href="">My Outfits</a>
-          <span class="seperators">|</span>
-        <a class="defaultNavLabelStyle fourLinkSpacing" href="">Style Inspo</a>
-          <span class="seperators">|</span>
-        <a class="defaultNavLabelStyle fourLinkSpacing" href="">My Style Calandar</a>
-      </div>
-
-      <div class="styleLogin">
-        <p class="addedStyleProfile">Dropdown Menu<br>
-      </div>
-</nav>
-
-  <button class="headButton formButtonStyle"><a href="/logout">Logout</a></button> {{!-- must be logged in --}}
-  <br>
-
 <h1>{{user.username}} Profile</h1>
 <br>
 
@@ -27,9 +8,3 @@
 <p>{{user.userEmail}}</p>
 
 <img type="file" name="newPath" src="{{user.image}}" width="20%">
-
-
-  <button type="button" class="btn btn-outline-secondary subBtnClass formButtonStyle"><a class="coloredLink" href="/clothing">Edit Profile</a></button>
-  <button type="button" class="btn btn-outline-secondary subBtnClass formButtonStyle"><a class="coloredLink" href="/closet">See Closet</a></button>
-  <button type="button" class="btn btn-outline-secondary subBtnClass formButtonStyle"><a class="coloredLink" href="/clothing">Style Inspo</a></button>
-    <br><br>

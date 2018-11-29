@@ -47,7 +47,7 @@ router.get('/signup', (req, res, next) => {
                       res.redirect('/login')
                       return;
                   }
-                       res.redirect('/profile');
+                       res.redirect('/userHome');
                   })
               
                 }) 
@@ -69,18 +69,19 @@ router.get('/login', (req, res, next) => {
 
 // need login POST request to login
 router.post("/login", passport.authenticate("local", {
-  successRedirect: "/profile",
+  successRedirect: "/userHome",
   failureRedirect: "/login",
   failureFlash: true,
   passReqToCallback: true
 }));
 
-// Takes you to the your Profile (/profile)
-router.get('/profile', (req, res, next) => {
-      res.render('views-user/profile', {user: req.user})
+// Takes you to the your userHome Page (/userHome)
+router.get('/userHome', (req, res, next) => {
+      res.render('views-user/userHome', {user: req.user})
 });
 
 
+// need profile GET request to view profile
 // need profile POST request to edit/update profile
 
 

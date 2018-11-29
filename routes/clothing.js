@@ -84,7 +84,7 @@ router.post('/clothing/:theID/addDate', (req, res, next)=>{
 router.post('/clothing/:theID/delete', (req, res, next)=>{
   Clothing.findByIdAndRemove(req.params.theID)
     .then(()=>{
-      res.redirect('/profile');
+      res.redirect('/userHome');
   })
     .catch((err)=>{
       console.log(err);

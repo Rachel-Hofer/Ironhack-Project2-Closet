@@ -1,10 +1,17 @@
-.threeLinkSpacing {
-  width: 10vw; }
+.fourLinkSpacing {
+  width: 12vw; }
 
-.addedStyleProfile {
-  text-align: right;
-  margin-left: 64vw;
-  color: #004d00;
-  font-weight: bold; }
+.styleHeaderProfile {
+  width: 40vw; }
+
+.styleLoginProfile {
+  margin-left: 47vw;
+  text-align: right; }
+
+.coloredLink:link {
+  color: #ffffff; }
+
+.coloredLink:visited {
+  color: #ffffff; }
 
 /*# sourceMappingURL=profile.css.map */
