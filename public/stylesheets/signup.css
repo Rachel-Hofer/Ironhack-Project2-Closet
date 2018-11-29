@@ -5,6 +5,14 @@
   min-height: 100vh;
   background-position: center; }
 
+.styleLoginSignup {
+  margin-left: 66vw;
+  text-align: right; }
+
+.addedStyle {
+  color: #00264d;
+  margin-top: 1vh; }
+
 .companyLogoHeader {
   width: 12.5vw;
   height: 18.5vh;

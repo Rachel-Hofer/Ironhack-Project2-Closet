@@ -1,89 +1,48 @@
+// <><><><><><><><><><><><><><><><><><><>
+//     CSS: when needed for ALL views
+// <><><><><><><><><><><><><><><><><><><>
+
 body {  // font for all pages
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 #header {  // header for all pages
   display: flex;
-  margin-bottom: 1vh;
-  border-bottom: 2px solid #004d00;
+  align-items: center;
   background-color: #f6f6ef;
+  font-size: 1vw;
+  margin-bottom: 1vh;
+  padding-left: 1vw;
+  border-bottom: 2px solid #004d00;
 }
 
-.addedStyle{
-  text-align: right;
-  padding-left: 66vw;
-  color: #00264d;
- }
- 
- .addedStyleGreen{
-   text-align: right;
-   padding-left: 66vw;
-   color: #004d00;
-   font-weight: bold;
-  }
+// .seperators {  // styling for | seperators between links on left side of nav bar
+//   margin-right: 1.5vw;
+//   }
 
-
-
-.clothingImg {
-  width: 250px;
-  margin-left: 20%;
+.defaultNavLabelStyle:link {  // styling for links on left side in nav bar on all pages
+  color: #004d00;
+  font-weight: bold;
 }
 
-.red {
-  background-color: red;
-  width: 4vw;
-  height: 6vh;
+.defaultNavLabelStyle:visited {  // styling for clicked links on left side in nav bar on all pages
+  color: #004d00;
+  font-weight: bold;
 }
 
-.inputStyle {
-  margin-left: 48%;
-}
-
-
-
-
-.topNavSettings {
-  width: 10vw;
-}
-
-   
-
-
-.moreButtonStyles {
+.formButtonStyle {  // "default" button for all pages - additional styling to bootstrap
   background-color: #00264d;
   border: 1px solid #00264d;
 }
 
-.loginHere:link {
-  color: #004d00;
-  font-weight: bold;
-}
 
-.loginHere:visited {
-  color: #004d00;
-  font-weight: bold;
-}
 
-.styleHeader {
-  display: flex;
-  margin-left: 1vw;
-  font-size: 1vw;
-  padding-top: 1vw;
-}
 
-.styleLogin {
-  padding-top: .8vw;
-}  
 
-.linkFeature {
-  width: 6vw;
-}
 
-.seperators {
-margin-right: 1.5vw;
-}
 
-.formBackground {
-  background-color: #ecf2f9;
-}
+
+
+
+
 

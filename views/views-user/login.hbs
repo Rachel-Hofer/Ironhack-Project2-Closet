@@ -2,16 +2,16 @@
 
 <nav id="header">  {{!-- nav bar: some variation of this will show in every view. login page: About Us, Features, Contact Us --}}
       <div class="styleHeader">
-        <a class="loginHere linkFeature" href="">About Us</a>
-        <span class="seperators">  |  </span>
-        <a class="loginHere linkFeature" href="">Features</a>
-        <span class="seperators">  |  </span>
-        <a class="loginHere linkFeature" href="">Contact Us</a>
+        <a class="defaultNavLabelStyle threeLinkSpacing" href="">About Us</a>
+          <span class="seperators">|</span>
+        <a class="defaultNavLabelStyle threeLinkSpacing" href="">Features</a>
+          <span class="seperators">|</span>
+        <a class="defaultNavLabelStyle threeLinkSpacing" href="">Contact Us</a>
       </div>
 
-      <div class="styleLogin">  {{!-- redirects to sign-up page --}}
+      <div class="styleLoginLogin">  {{!-- redirects to sign-up page --}}
         <p class="account-message addedStyle">Not yet a member?<br>
-        <a class="loginHere" href="/">Sign-Up Here</a></p>
+        <a class="defaultNavLabelStyle" href="/">Sign-Up Here</a></p>
       </div>
 </nav>
 
@@ -35,7 +35,7 @@
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" required>
   </div>
 
-  <button type="submit" class="btn btn-primary moreButtonStyles">Login</button>  {{!-- button that SUBMITS the form--}}
+  <button type="submit" class="btn btn-primary formButtonStyle">Login</button>  {{!-- button that SUBMITS the form--}}
 
 </form>  {{!-- end of login form --}}
 </div>  {{!-- end of div that holds header of signup form and signup form --}}

@@ -3,18 +3,18 @@ body {
 
 #header {
   display: flex;
+  align-items: center;
+  background-color: #f6f6ef;
+  font-size: 1vw;
   margin-bottom: 1vh;
-  border-bottom: 2px solid #004d00;
-  background-color: #f6f6ef; }
+  padding-left: 1vw;
+  border-bottom: 2px solid #004d00; }
 
-.addedStyle {
-  text-align: right;
-  padding-left: 66vw;
-  color: #00264d; }
+.defaultNavLabelStyle:link {
+  color: #004d00;
+  font-weight: bold; }
 
-.addedStyleGreen {
-  text-align: right;
-  padding-left: 66vw;
+.defaultNavLabelStyle:visited {
   color: #004d00;
   font-weight: bold; }
 
@@ -30,29 +30,9 @@ body {
 .inputStyle {
   margin-left: 48%; }
 
-.topNavSettings {
-  width: 10vw; }
-
 .moreButtonStyles {
   background-color: #00264d;
   border: 1px solid #00264d; }
-
-.loginHere:link {
-  color: #004d00;
-  font-weight: bold; }
-
-.loginHere:visited {
-  color: #004d00;
-  font-weight: bold; }
-
-.styleHeader {
-  display: flex;
-  margin-left: 1vw;
-  font-size: 1vw;
-  padding-top: 1vw; }
-
-.styleLogin {
-  padding-top: .8vw; }
 
 .linkFeature {
   width: 6vw; }

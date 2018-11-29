@@ -1,3 +1,7 @@
+// <><><><><><><><><><><><><><>
+//     CSS: for SIGNUP view
+// <><><><><><><><><><><><><><>
+
 .closetBackground {  // background image on signup and login page
   background-image: url('/images/biggestClosetPhoto.jpg');
   background-repeat: no-repeat;
@@ -5,6 +9,20 @@
   min-height: 100vh;
   background-position: center;
 }
+
+.threeLinkSpacing {  // width change for links on left side in nav bar - use class for any view with 3 links
+  width: 6vw;
+}
+
+ .styleLoginSignup {  // left-margin for "login" section of signup page
+  margin-left: 66vw;
+  text-align: right;
+}
+
+.addedStyle {  // additional styling to right side of top nav bar on signup and login page
+  color: #00264d;
+  margin-top: 1vh;
+ }
 
 .companyLogoHeader {  // logo styling on signup page
   width: 12.5vw;
@@ -25,3 +43,5 @@
   padding: 1%;
   margin-top: 9.8vw;
 }
+
+

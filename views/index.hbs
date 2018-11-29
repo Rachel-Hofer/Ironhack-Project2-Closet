@@ -2,16 +2,16 @@
 
 <nav id="header">  {{!-- nav bar: some variation of this will show in every view. signup page: About Us, Features, Contact Us --}}
       <div class="styleHeader">
-        <a class="loginHere linkFeature" href="">About Us</a>
-        <span class="seperators">  |  </span>
-        <a class="loginHere linkFeature" href="">Features</a>
-        <span class="seperators">  |  </span>
-        <a class="loginHere linkFeature" href="">Contact Us</a>
+        <a class="defaultNavLabelStyle threeLinkSpacing" href="">About Us</a>
+          <span class="seperators">|</span>
+        <a class="defaultNavLabelStyle threeLinkSpacing" href="">Features</a>
+          <span class="seperators">|</span>
+        <a class="defaultNavLabelStyle threeLinkSpacing" href="">Contact Us</a>
       </div>
 
-      <div class="styleLogin"> {{!-- redirects to login page --}}
+      <div class="styleLoginSignup"> {{!-- redirects to login page --}}
         <p class="account-message addedStyle">Already have an account?<br>
-        <a class="loginHere" href="/login">Login Here</a></p>
+        <a class="defaultNavLabelStyle" href="/login">Login Here</a></p>
       </div>
 </nav>
 
@@ -54,7 +54,7 @@
     <input type="file" name="path">
   </div>
 
-  <button type="submit" class="btn btn-primary moreButtonStyles">Sign-Up</button>  {{!-- button that SUBMITS the form--}}
+  <button type="submit" class="btn btn-primary formButtonStyle">Sign-Up</button>  {{!-- button that SUBMITS the form--}}
 
 </form>  {{!-- end of signup form --}}
 </div>  {{!-- end of div that holds header of signup form and signup form --}}
