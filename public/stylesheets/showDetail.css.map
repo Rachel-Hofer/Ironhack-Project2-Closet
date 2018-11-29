@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "showDetail.css",
+	"sources": [
+		"showDetail.scss"
+	],
+	"names": [],
+	"mappings": "AAMA,AAAA,qBAAqB,CAAC;EACpB,OAAO,EAAE,IAAI,GACd"
+}

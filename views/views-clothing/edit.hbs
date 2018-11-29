@@ -1,12 +1,35 @@
-<br>
-<button class="headButton"><a href="/profile">My Profile</a></button> {{!-- must be logged in --}}
-<br>
+<nav class="userHomeHeaderAddOns" id="header">
+    <div class="styleHeaderProfile">
+        <a class="defaultNavLabelStyle fourLinkSpacing" href="/closet">My Closet</a>
+          <span class="seperators">|</span>
+        <a class="defaultNavLabelStyle fourLinkSpacing" href="/myOutfits">My Outfits</a>
+          <span class="seperators">|</span>
+        <a class="defaultNavLabelStyle fourLinkSpacing" href="">Style Inspo</a>
+          <span class="seperators">|</span>
+        <a class="defaultNavLabelStyle fourLinkSpacing" href="">My Style Calandar</a>
+    </div>
 
+    <div class="styleLoginProfile">
+        <div class="btn-group">
+          <button type="button" class="btn dropdown-toggle addedStyle formButtonStyle coloredLink defaultButtonHover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{user.firstName}}'s Menu</button>
+            <div class="dropdown-menu dropdown-menu-right menuDefaultDropdownStyles">
+              <a class="dropdown-item topLinkAddOns dropDownHoverDefault" href="/userHome">{{user.firstName}}'s Home</a>
+              <a class="dropdown-item bottomLinkAddOns dropDownHoverDefault" href="/profile">{{user.firstName}}'s Profile</a>
+                  <div class="dropdown-divider menuDefaultAddOns"></div>
+              <a class="dropdown-item logoutAddOns" href="/">Logout</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+{{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
+
+
+<div class="formStylingDefaultEdit">
 <form action="/clothing/{{theClothing._id}}/update" method="POST" enctype="multipart/form-data">
     <h3>Edit your Clothing</h3><br><br>
 
 {{!-- Image - String--}}
-
 <div class="form-group">
     <img src="{{theClothing.image}}" width="125px">
     <input type="file" name="path">
@@ -14,7 +37,6 @@
 
 
 {{!-- Clothing Category Dropdown --}}
-
   <label class="my-1 mr-2" for="inlineFormCustomSelectPref" name="category">Clothing Category</label>
   <select class="custom-select my-1 mr-sm-2" data-style="btn-info" name="category" >
     <option selected value="{{theClothing.category}}">{{theClothing.category}}</option>
@@ -28,7 +50,6 @@
 
 
 {{!-- Seasons Dropdown --}}
-
 <label class="my-1 mr-2" for="inlineFormCustomSelectPref" name"category">Season</label>
   <select class="custom-select my-1 mr-sm-2" data-style="btn-info" name="season">
     <option selected value="{{theClothing.season}}">{{theClothing.season}}</option>
@@ -53,7 +74,6 @@
 
 
 {{!-- Sub-Type - String --}}
-
   <div class="form-group">
     <label for="exampleInputEmail1">Clothing Sub-Type</label>
     <input class="form-control" id="exampleInputEmail1" name="subType" value="{{theClothing.subType}}">
@@ -61,7 +81,6 @@
 
 
 {{!-- Color - String --}}
-
   <div class="form-group">
     <label for="exampleInputPassword1">Color</label>
     <input type="text" class="form-control" id="exampleInputPassword1" name="color" value="{{theClothing.color}}">
@@ -69,7 +88,6 @@
 
 
 {{!-- Size - Radio - not working --}}
-
 <p>Size</p>
 <div class="btn-group btn-group-toggle" data-toggle="buttons">
   <label class="btn btn-secondary active">
@@ -95,17 +113,22 @@
 
 
 {{!-- Last Worn - Date --}}
-
   <div class="form-group">
-    <label for="exampleInputPassword1">Last Worn</label>
+    <label for="exampleInputPassword1">Tag a new date to this item</label>
     <input type="date" class="form-control" id="exampleInputPassword1" name="lastWorn" value="{{theClothing.lastWorn}}">
   </div>
 <br>
 
- <button type="submit" class="btn btn-primary">Submit Changes</button>
+ <button type="submit" class="btn btn-primary formButtonStyle">Save Changes</button>
+ </form>
 
-</form>
 
+    <form action="/clothing/{{theClothing._id}}/delete" method="POST">
+        <button type="submit" class="btn btn-primary formButtonStyle">Delete Item</button>
+    </form>
+
+
+</div>
 
 {{#if message}}
 <h4>{{message}}</h4>

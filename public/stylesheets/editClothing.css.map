@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "editClothing.css",
+	"sources": [
+		"editClothing.scss"
+	],
+	"names": [],
+	"mappings": "AAMA,AAAA,uBAAuB,CAAC;EACtB,KAAK,EAAE,GAAG;EACV,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,GAAG;EAChB,MAAM,EAAE,iBAAiB;EACzB,OAAO,EAAE,EAAE;EACX,UAAU,EAAE,EAAE;EACd,gBAAgB,EAAE,OAAO,GAC1B"
+}

@@ -1,0 +1,20 @@
+// <><><><><><><><><><><><><><><><><>
+//     CSS: for EDIT CLOTHING view 
+//     url: (/clothing/:-id/update)
+//     hbs: views-clothing/edit.hbs
+// <><><><><><><><><><><><><><><><><>
+
+.formStylingDefaultEdit {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 35%;
+  border: 2px solid #00264d;
+  padding: 1%;
+  margin-top: 2%;
+  background-color: #ecf2f9;
+}
+
+

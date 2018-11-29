@@ -1,12 +1,61 @@
-<br>
-<button class="headButton"><a href="/profile">My Profile</a></button> {{!-- must be logged in --}}
-<br>
+<nav class="userHomeHeaderAddOns" id="header">
+    <div class="styleHeaderProfile">
+        <a class="defaultNavLabelStyle fourLinkSpacing" href="/closet">My Closet</a>
+          <span class="seperators">|</span>
+        <a class="defaultNavLabelStyle fourLinkSpacing" href="/myOutfits">My Outfits</a>
+          <span class="seperators">|</span>
+        <a class="defaultNavLabelStyle fourLinkSpacing" href="">Style Inspo</a>
+          <span class="seperators">|</span>
+        <a class="defaultNavLabelStyle fourLinkSpacing" href="">My Style Calandar</a>
+    </div>
+
+    <div class="styleLoginProfile">
+        <div class="btn-group">
+          <button type="button" class="btn dropdown-toggle addedStyle formButtonStyle coloredLink defaultButtonHover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{user.firstName}}'s Menu</button>
+            <div class="dropdown-menu dropdown-menu-right menuDefaultDropdownStyles">
+              <a class="dropdown-item topLinkAddOns dropDownHoverDefault" href="/userHome">{{user.firstName}}'s Home</a>
+              <a class="dropdown-item bottomLinkAddOns dropDownHoverDefault" href="/profile">{{user.firstName}}'s Profile</a>
+                  <div class="dropdown-divider menuDefaultAddOns"></div>
+              <a class="dropdown-item logoutAddOns" href="/">Logout</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+{{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
+
+<div class="formStylingDefaultEdit">
 
     <img src="{{theSpecifics.image}}" width="275px">
- <h6>Category:</h6> 
-    <h4>{{theSpecifics.category}}</h4>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Category:</label>
+    <p class="">{{theSpecifics.category}}</p>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Season:</label>
+    <p class="">{{theSpecifics.season}}</p>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Type:</label>
+    <p class="">{{theSpecifics.type}}</p>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Clothing Sub-Type:</label>
+    <p class="">{{theSpecifics.category}}</p>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Clothing Sub-Type:</label>
+    <p class="">{{theSpecifics.category}}</p>
+  </div>
+
+
  <h6>Season:</h6> 
-    <h4>{{theSpecifics.season}}</h4>
+    <h4></h4>
  <h6>Type:</h6> 
     <h4>{{theSpecifics.type}}</h4>
  <h6>Sub-Type:</h4> 
@@ -18,14 +67,22 @@
  <h6>Dates Worn:</h4> 
     <h4>{{theSpecifics.lastWorn}}</h4>
 
-  <form action="/clothing/{{theSpecifics._id}}/addDate" method="POST">
-    <div class="form-group">
-        <label for="exampleInputPassword1">New Date</label>
-        <input type="date" class="form-control" id="exampleInputPassword1" name="lastWorn">
-        <button>Add Date</button>
-    </div>
-  </form>
 
+<div class="clothingDetailFooter">
+      <a href="/updateOutfit">
+      <button type="button" class="btn btn-primary formButtonStyle">Edit</button>  
+      </a>
+
+      <form action="/clothing/{{theSpecifics._id}}/addDate" method="POST">
+         <div class="form-group">
+            <label for="exampleInputPassword1">New Date</label>
+            <input type="date" class="form-control" id="exampleInputPassword1" name="lastWorn">
+            <button class="btn btn-primary formButtonStyle">Add Date</button>
+         </div>
+      </form>
+</div>
+
+</div>
 
 
 

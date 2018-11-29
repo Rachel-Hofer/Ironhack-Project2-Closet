@@ -38,15 +38,22 @@
       <span id="theImageHolder" class="clothingImg"></span>
     </div>
       
-    <div id="carasoulButtonCollectionDiv">
-    <div id="carasoulButtonCollectionDivBoth">
-      <button type="button" class="btn formButtonStyle defaultButtonHover"><a id="topDetail" class="coloredLink" href="/clothing/{{theSpecifics._id}}">Clothing Details</a></button>
-      <button type="button" class="btn formButtonStyle defaultButtonHover"><a id="topEdit" class="coloredLink" href="/clothing/{{theClothing._id}}/update">Edit Clothing</a></button>
-    </div>
-    <div id="carasoulButtonCollectionDivBottom">
-      <button type="button" class="btn formButtonStyle defaultButtonHover"><a id="topDetail" class="coloredLink" href="/clothing/{{theSpecifics._id}}">Clothing Details</a></button>
-      <button type="button" class="btn formButtonStyle defaultButtonHover"><a id="topEdit" class="coloredLink" href="/clothing/{{theClothing._id}}/update">Edit Clothing</a></button>
-    </div>
+    <div id="carasoulButtonCollectionDiv" class="closetFooter">
+
+      <div id="carasoulButtonCollectionDivBoth">
+        <button type="button" class="btn formButtonStyle defaultButtonHover closetButtonSpace"><a id="topDetail" class="coloredLink" href="/clothing/{{theSpecifics._id}}">Clothing Details</a></button>
+        <button type="button" class="btn formButtonStyle defaultButtonHover closetButtonSpaceTwo"><a id="topEdit" class="coloredLink" href="/clothing/{{theClothing._id}}/update">Edit Clothing</a></button>
+      </div>
+
+      <div id="carasoulButtonCollectionDivBottom">
+        <button type="button" class="btn formButtonStyle defaultButtonHover"><a id="topDetail" class="coloredLink" href="/createOutfit">Create New Outfit</a></button>
+      </div>
+
+      <div class="form-group closetAddDate">
+          <label class="outfitAddDateLabel" for="exampleInputPassword1">Never lose track of when you wear what! Tag this item to your "Style" Calendar now.</label>
+          <input class="outfitAddDateInput" type="date" class="form-control" id="exampleInputPassword1" name="lastWorn" value="{{theClothing.lastWorn}}">
+      </div>
+
   </div>
   
   <a id="right_button" class="navArrows carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">

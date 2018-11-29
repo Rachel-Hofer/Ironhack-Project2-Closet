@@ -47,5 +47,27 @@
 #carasoulButtonCollectionDivBoth {  // "details" buttons on BOTH carasouls of closet/createOutfit page
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5%;
+  margin-bottom: 1%;
+}
+
+.closetFooter {
+  display: flex;
+  flex-direction: column;
+}
+
+.closetButtonSpace {
+  margin-right: 4%;
+  margin-left: -2%;
+}
+
+.closetAddDate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 32%;
+  border: 2px solid #00264d;
+  padding: 1%;
+  background-color: #ecf2f9;
+  margin-top: 1%;
 }
