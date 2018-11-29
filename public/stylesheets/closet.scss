@@ -3,8 +3,18 @@
   margin-left: 20%;
 }
 
-.red {  // arrows on carasoul of closet page - WILL BE USED FOR CREATE OUTFITS PAGE ALSO
+.navArrows {  // arrows on carasoul of closet page - WILL BE USED FOR CREATE OUTFITS PAGE ALSO
   background-color: #00264d;
   width: 4vw;
   height: 6vh;
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+
+.navArrows:hover {  // arrows on carasoul of closet page - WILL BE USED FOR CREATE OUTFITS PAGE ALSO
+  background-color: #00264d;
+  width: 4vw;
+  height: 6vh;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
 }

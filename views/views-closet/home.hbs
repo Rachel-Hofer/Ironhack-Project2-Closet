@@ -1,23 +1,44 @@
-<h2>My Closet</h2>
-<br>
+<nav class="userHomeHeaderAddOns" id="header">
+    <div class="styleHeaderProfile">
+        <a class="defaultNavLabelStyle fourLinkSpacing" href="/closet">My Closet</a>
+          <span class="seperators">|</span>
+        <a class="defaultNavLabelStyle fourLinkSpacing" href="/myOutfits">My Outfits</a>
+          <span class="seperators">|</span>
+        <a class="defaultNavLabelStyle fourLinkSpacing" href="">Style Inspo</a>
+          <span class="seperators">|</span>
+        <a class="defaultNavLabelStyle fourLinkSpacing" href="">My Style Calandar</a>
+    </div>
+
+    <div class="styleLoginProfile">
+        <div class="btn-group">
+          <button type="button" class="btn dropdown-toggle addedStyle formButtonStyle coloredLink defaultButtonHover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{user.firstName}}'s Menu</button>
+            <div class="dropdown-menu dropdown-menu-right menuDefaultDropdownStyles">
+              <a class="dropdown-item topLinkAddOns dropDownHoverDefault" href="/userHome">{{user.firstName}}'s Home</a>
+              <a class="dropdown-item bottomLinkAddOns dropDownHoverDefault" href="/profile">{{user.firstName}}'s Profile</a>
+                  <div class="dropdown-divider menuDefaultAddOns"></div>
+              <a class="dropdown-item logoutAddOns" href="/">Logout</a>
+            </div>
+        </div>
+    </div>
+</nav>
 
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div id="toManipulate" class="carousel-inner">
     <div class="forLoopClass carousel-item active">
 
-    <a id="left_button" class= "red carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <a id="left_button" class= "navArrows carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
     </a>
 
       <div id="topsDiv">
       <span id="theImageHolder" class="clothingImg"></span>
-         <button type="button" class="btn btn-outline-secondary subBtnClass"><a id="topDetail" class="coloredLink" href="#">Top Details</a></button>
+         <button type="button" class="btn formButtonStyle defaultButtonHover"><a id="topDetail" class="coloredLink" href="#">Top Details</a></button>
          {{!-- <button type="button" class="btn btn-outline-secondary subBtnClass"><a id="topEdit" class="coloredLink" href="#">Edit</a></button>
          <button type="button" class="btn btn-outline-secondary subBtnClass"><a id="topDelete" class="coloredLink" href="#">Delete</a></button> --}}
       </div>
       
-  <a id="right_button" class="red carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+  <a id="right_button" class="navArrows carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
@@ -30,19 +51,19 @@
   <div id="toManipulate" class="carousel-inner">
     <div class="forLoopClass carousel-item active">
 
-    <a id="left_button_lower" class= "red carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <a id="left_button_lower" class= "navArrows carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
     </a>
 
       <div id="bottomssDiv">
       <span id="theImageHolder2" class="clothingImg"></span>
-      <button type="button" class="btn btn-outline-secondary subBtnClass"><a id="bottomDetail" class="coloredLink" href="#">Bottom Details</a></button>
+      <button type="button" class="btn formButtonStyle defaultButtonHover"><a id="bottomDetail" class="coloredLink" href="#">Bottom Details</a></button>
       {{!-- <button type="button" class="btn btn-outline-secondary subBtnClass"><a id="bottomEdit" class="coloredLink" href="#">Edit</a></button>
       <button type="button" class="btn btn-outline-secondary subBtnClass"><a id="bottomDelete" class="coloredLink" href="#">Delete</a></button> --}}
       </div>
 
-  <a id="right_button_lower" class="red carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+  <a id="right_button_lower" class="navArrows carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
@@ -56,15 +77,7 @@
 <input type="hidden" id="theSelectedTop" name="theTop">
 <input type="hidden" id="theSelectedBottom" name="theBottom">
 <br>
-<button class="btn btn-outline-secondary subBtnClass">Add this Outfit</button>
+<button class="btn formButtonStyle defaultButtonHover">Add this Outfit</button>
 </form>
 
-
-
-{{!-- API Route: to take a parameter, clothing "type"
-get.clothing similar to this
-resJSON all those clothings
-front end JS FOR THIS PAGE
-AXIOS call to that, response will be all the clothing
-for each one = .image --}}
 

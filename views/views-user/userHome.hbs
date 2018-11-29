@@ -1,8 +1,8 @@
-<nav id="header">
+<nav class="userHomeHeaderAddOns" id="header">
     <div class="styleHeaderProfile">
         <a class="defaultNavLabelStyle fourLinkSpacing" href="/closet">My Closet</a>
           <span class="seperators">|</span>
-        <a class="defaultNavLabelStyle fourLinkSpacing" href="">My Outfits</a>
+        <a class="defaultNavLabelStyle fourLinkSpacing" href="/myOutfits">My Outfits</a>
           <span class="seperators">|</span>
         <a class="defaultNavLabelStyle fourLinkSpacing" href="">Style Inspo</a>
           <span class="seperators">|</span>
@@ -13,8 +13,8 @@
         <div class="btn-group">
           <button type="button" class="btn dropdown-toggle addedStyle formButtonStyle coloredLink defaultButtonHover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{user.firstName}}'s Menu</button>
             <div class="dropdown-menu dropdown-menu-right menuDefaultDropdownStyles">
-              <a class="dropdown-item topLinkAddOns dropDownHoverDefault" href="/profile">{{user.firstName}}'s Profile</a>
-              <a class="dropdown-item bottomLinkAddOns dropDownHoverDefault" href="#">Another action</a>
+              <a class="dropdown-item topLinkAddOns dropDownHoverDefault" href="/userHome">{{user.firstName}}'s Home</a>
+              <a class="dropdown-item bottomLinkAddOns dropDownHoverDefault" href="/profile">{{user.firstName}}'s Profile</a>
                   <div class="dropdown-divider menuDefaultAddOns"></div>
               <a class="dropdown-item logoutAddOns" href="/">Logout</a>
             </div>
@@ -27,13 +27,13 @@
 
     <div class="userHomeClosetBorder">
       <div class="myClosetDiv">
-          <span class="imageDivTitle">My Closet</span>
+          <span class="imageDivTitleCloset"><a class="divLink" href="/closet">My Closet</a></span>
       </div>
     </div>
 
     <div class="userHomeOutfitBorder">
       <div class="myOutfitsDiv">
-          My Outfits
+          <span class="imageDivTitleOutfits"><a class="divLink" href="/myOutfits">My Outfits</a></span>
       </div>
     </div>
 
@@ -44,13 +44,13 @@
 
     <div class="userHomeInspoBorder">
       <div class="styleInspoDiv">
-        Celebrity Style Inspo
+        <span class="imageDivTitleInspo"><a class="divLink" href="">Celeb Style<br>Inspo</a></span>
       </div>
     </div>
 
     <div class="userHomeCalendarBorder">
       <div class="myCalendarDiv">
-        Style Calendar
+        <span class="imageDivTitleCalendar"><a class="divLink" href="">My Style Calendar</a></span>
       </div>
     </div>
 
