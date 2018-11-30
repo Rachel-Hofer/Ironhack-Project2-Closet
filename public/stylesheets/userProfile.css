@@ -1,12 +1,21 @@
 .profilePic {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin-top: 6%; }
 
 .profilePicSize {
   width: auto;
-  height: 40vh; }
+  height: 40vh;
+  border: 2px solid #00264d; }
 
 .profileFormUpdated {
-  width: 31%; }
+  width: 31%;
+  margin-left: 10%;
+  margin-top: 6%; }
+
+.entireProfile {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 /*# sourceMappingURL=userProfile.css.map */
