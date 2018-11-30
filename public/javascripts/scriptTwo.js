@@ -25,7 +25,7 @@ $(document).ready(function() { // when the document is loaded
   
   //right click
   $("#right_button_outfits").click(function() {
-      $('#theImageHolderOutfits').html(`<img class="clothingImg" src=${tops[topNum].image}"> <br> <img class="clothingImg" src="${bottoms[bottomNum].image}>`)
+      $('#theImageHolderOutfits').html(`<img class="clothingImg" src="${tops[topNum].image}"> <br> <img class="clothingImg" src="${bottoms[bottomNum].image}">`)
       topNum++;
       bottomNum++;
   })

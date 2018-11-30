@@ -24,7 +24,7 @@ axios.get('http://localhost:3000/api/clothing/top')
 //TOPS carasoul right click
 $("#right_button").click(function() {
 
-    $('#theImageHolder').html(`<img class="clothingImg" src="${tops[topNum].image}">`)
+    $('#theImageHolder').html(`<img class="clothingImg" src="${tops[topNum].image}"> /`)
     $("#topDetail").prop("href", `/clothing/${tops[topNum]._id}`)
     $("#topEdit").prop("href", `/clothing/${tops[topNum]._id}/update`)
     $("#topDelete").prop("href", `/clothing/${tops[topNum]._id}/delete`)
