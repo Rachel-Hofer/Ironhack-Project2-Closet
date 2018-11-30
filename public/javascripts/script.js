@@ -5,7 +5,7 @@ let bottoms;
 let topNum = 0;
 let bottomNum = 0;
    
-axios.get('http://localhost:3000/api/clothing/top')
+axios.get('http://process.env.MONGODB_URI/api/clothing/top')
     .then((theClothing)=>{
         tops = theClothing.data;
     })
@@ -13,7 +13,7 @@ axios.get('http://localhost:3000/api/clothing/top')
             console.log('THIS IS AN ERROR',err);
  })
     
- axios.get('http://localhost:3000/api/clothing/bottom')
+ axios.get('http://process.env.MONGODB_URI/api/clothing/bottom')
     .then((theClothing)=>{
         bottoms = theClothing.data;
  })
