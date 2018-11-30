@@ -83,10 +83,13 @@ router.get('/userHome', (req, res, next) => {
 
 // GET request to view profile (/profile)
 router.get('/profile', (req, res, next) => {
-  console.log(req.user)
   res.render('views-user/profile', {theLoggedinUser: req.user})
 });
 
+// GET request to view update profile (/profile/ID/update)
+router.get('/profile/:theID/update', (req, res, next) => {
+  res.render('views-user/editProfile', {theLoggedinUser: req.user})
+});
 
 // POST request to edit/update profile
 router.post('/profile/:theID/update', uploadCloud.single('path'), (req, res, next)=>{
@@ -105,8 +108,6 @@ router.post('/profile/:theID/update', uploadCloud.single('path'), (req, res, nex
       next(err)
   })
 })
-
-
 
 
 router.post('/clothing/:theID/addDate', (req, res, next)=>{

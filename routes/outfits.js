@@ -27,13 +27,12 @@ router.post('/createOutfit', uploadCloud.single('path') , (req, res, next) => {
 
   Outfits.create(newOutfit)  
     .then(()=>{
-      res.redirect('/createOutfit')
+      res.redirect('/myOutfits')
     })
     .catch((err)=> {
       next((err))
     })
 })
-
 
 // GET request to see the "View Outfits Page"
 router.get('/myOutfits', (req, res, next) => {
