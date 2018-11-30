@@ -1,0 +1,72 @@
+<nav class="userHomeHeaderAddOns" id="header">
+    <div class="styleHeaderProfile">
+        <a class="defaultNavLabelStyle fourLinkSpacing" href="/closet">My Closet</a>
+          <span class="seperators">|</span>
+        <a class="defaultNavLabelStyle fourLinkSpacing" href="/myOutfits">My Outfits</a>
+          <span class="seperators">|</span>
+        <a class="defaultNavLabelStyle fourLinkSpacing" href="">Style Inspo</a>
+          <span class="seperators">|</span>
+        <a class="defaultNavLabelStyle fourLinkSpacing" href="">My Style Calandar</a>
+    </div>
+
+    <div class="styleLoginProfile">
+        <div class="btn-group">
+          <button type="button" class="btn dropdown-toggle addedStyle formButtonStyle coloredLink defaultButtonHover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{user.firstName}}'s Menu</button>
+            <div class="dropdown-menu dropdown-menu-right menuDefaultDropdownStyles">
+              <a class="dropdown-item topLinkAddOns dropDownHoverDefault" href="/userHome">{{user.firstName}}'s Home</a>
+              <a class="dropdown-item bottomLinkAddOns dropDownHoverDefault" href="/profile">{{user.firstName}}'s Profile</a>
+                  <div class="dropdown-divider menuDefaultAddOns"></div>
+              <a class="dropdown-item logoutAddOns" href="/">Logout</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+{{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
+
+
+<div class="formStylingDefaultEdit">
+<form action="/profile/{{theLoggedinUser._id}}/update" method="POST" enctype="multipart/form-data">
+    <h3>Edit your Prfoile</h3><br><br>
+
+{{!-- Image - String--}}
+<div class="form-group">
+    <img src="{{theLoggedinUser.image}}" width="125px">
+    <input type="file" name="path">
+  </div>
+
+{{!-- Sub-Type - String --}}
+  <div class="form-group">
+    <label for="exampleInputEmail1">Username:</label>
+    <input class="form-control" id="exampleInputEmail1" name="subType" value="{{theLoggedinUser.username}}">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">First Name:</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" name="color" value="{{theLoggedinUser.firstName}}">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Last Name:</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" name="color" value="{{theLoggedinUser.lastName}}">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Last Name:</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" name="color" value="{{theLoggedinUser.lastName}}">
+  </div>
+
+ <button type="submit" class="btn btn-primary formButtonStyle">Save Changes</button>
+ </form>
+
+
+    <form action="/profile/{{theLoggedinUser._id}}/delete" method="POST">
+        <button type="submit" class="btn btn-primary formButtonStyle">Delete Item</button>
+    </form>
+
+
+</div>
+
+{{#if message}}
+<h4>{{message}}</h4>
+{{/if}}

@@ -88,7 +88,38 @@ router.get('/profile', (req, res, next) => {
 });
 
 
-// need profile POST request to edit/update profile
+// POST request to edit/update profile
+router.post('/profile/:theID/update', uploadCloud.single('path'), (req, res, next)=>{
+  const changes = req.body;
+
+  if(req.file){
+    changes.image = req.file.url;
+  }
+
+  User.findByIdAndUpdate(req.params.theID, changes)
+  .then((response)=>{
+      res.redirect('/profile/'+ response._id);
+
+  })
+  .catch((err)=>{
+      next(err)
+  })
+})
+
+
+
+
+router.post('/clothing/:theID/addDate', (req, res, next)=>{
+  Clothing.findByIdAndUpdate(req.params.theID, {$push: {lastWorn: req.body.lastWorn}})
+  .then((response)=>{
+      res.redirect('/clothing/'+ response._id);
+
+  })
+  .catch((err)=>{
+      next(err)
+  })
+
+})
 
 
 // Logs you out -> takes you to the your Home page (/)
