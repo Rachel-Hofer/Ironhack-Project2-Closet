@@ -1,13 +1,12 @@
 const express    = require('express');
 const router     = express.Router();
 const uploadCloud = require('../config/cloudinary');
-
 const Outfits = require("../models/Outfit");
 const Clothing = require("../models/Clothing");
 
 // GET request to show /createOutfit page
 router.get('/createOutfit', (req, res, next) => {
-  res.render('views-outfit/createOutfit');
+  res.render('views-outfit/createOutfit', {user: req.user});
 });
 
 // POST request to create a new outfit (2 articles of clothing)

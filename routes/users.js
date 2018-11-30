@@ -94,14 +94,16 @@ router.get('/profile/:theID/update', (req, res, next) => {
 // POST request to edit/update profile
 router.post('/profile/:theID/update', uploadCloud.single('path'), (req, res, next)=>{
   const changes = req.body;
-
+  console.log("this should be req.body", changes)
   if(req.file){
     changes.image = req.file.url;
   }
 
   User.findByIdAndUpdate(req.params.theID, changes)
   .then((response)=>{
-      res.redirect('/profile/'+ response._id);
+      console.log("this should be the updated response", response)
+      console.log("this should be the updated changes??", changes)
+      res.redirect('/profile');
 
   })
   .catch((err)=>{

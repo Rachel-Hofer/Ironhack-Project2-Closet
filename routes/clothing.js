@@ -5,9 +5,9 @@ const uploadCloud = require('../config/cloudinary');
 const Clothing = require("../models/Clothing");
 
 
-// Takes you to the create new Clothing page (/clothing)
+// GET Takes you to the create new Clothing page (/clothing) 
 router.get('/clothing', (req, res, next) => {
-  res.render('views-clothing/create');
+  res.render('views-clothing/create', {user: req.user});
 });
 
 // POST request to create new clohting (/clothing/:_id)
@@ -21,7 +21,6 @@ router.post('/clothing', uploadCloud.single('path') , (req, res, next) => {
     size:req.body.size,
     lastWorn:req.body.lastWorn,
     image: req.file.url
-    // owner : req.user._id
   };
 
   if(!req.body.lastWorn){
@@ -41,7 +40,7 @@ router.post('/clothing', uploadCloud.single('path') , (req, res, next) => {
 router.get('/clothing/:theID/update', (req, res, next)=>{
   Clothing.findById(req.params.theID)
     .then((theClothing)=>{
-      res.render('views-clothing/edit', {theClothing})
+      res.render('views-clothing/edit', {theClothing, user: req.user})
   })
     .catch((err)=>{
       console.log(err);
@@ -79,7 +78,7 @@ router.post('/clothing/:theID/addDate', (req, res, next)=>{
 })
 
 
-// Takes you to the remove Clothing page (/removeClothing)
+// GET Takes you to the remove Clothing page (/removeClothing)
 router.post('/clothing/:theID/delete', (req, res, next)=>{
   Clothing.findByIdAndRemove(req.params.theID)
     .then(()=>{
@@ -91,13 +90,13 @@ router.post('/clothing/:theID/delete', (req, res, next)=>{
   })
 })
 
-// Takes you to the Clothing detail page (clothing/ID)
+// GET Takes you to the Clothing detail page (clothing/ID)
 router.get('/clothing/:theID', (req, res, next)=>{
  
   Clothing.findById(req.params.theID)
     .then((allInfoOnThatPieceOfClothing)=>{
 
-      res.render('views-clothing/showDetail', {theSpecifics: allInfoOnThatPieceOfClothing})
+      res.render('views-clothing/showDetail', {theSpecifics: allInfoOnThatPieceOfClothing, user: req.user})
   })
     .catch((err)=>{
       next(err);
