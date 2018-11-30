@@ -25,13 +25,11 @@
 {{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
 
 
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">   {{!-- start of BOTH carasouls --}}
-  <div id="toManipulate" class="carousel-inner centerBothCarasouls">
-
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">   {{!-- FIRST start of BOTH carasouls --}}
+  <div id="toManipulate" class="carousel-inner centerBothCarasouls">  {{!-- SECOND start of BOTH carasouls --}}
+    <div class="backgroundClassCreateOutfit backgroundClassCLoset">  {{!-- THIRD start of BOTH carasoul --}}
 
 {{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
-
-  <div class="backgroundClassCreateOutfit">
     <div class="forLoopClass carousel-item active carasoulWidthChange">  {{!-- start of TOP carasoul --}}
 
           <div class="navButtonsReSize">
@@ -53,7 +51,7 @@
           </div>
 
 </div>  {{!-- end of TOP carasoul --}}
-{{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
+
 <div class="forLoopClass carousel-item active carasoulWidthChange">  {{!-- start of BOTTOMS carasoul --}}
 
         <div class="navButtonsReSize">
@@ -75,10 +73,12 @@
         </div>
 
 </div>  {{!-- end of BOTTOMS carasoul --}}
-</div>
-{{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
-</div>
+
 </div>  {{!-- end of BOTH carasouls --}}
+</div>  {{!-- end of BOTH carasouls --}}
+
+
+
 {{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
 <div class="createOutfitFooter">  {{!-- start of container for buttons and date add --}}
 
@@ -88,8 +88,8 @@
       <input type="hidden" id="theSelectedBottom" name="theBottom">
         <button type="submit" class="btn formButtonStyle defaultButtonHover">Add this Outfit</button>
   </form>
-</div>
-{{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
+</div>  {{!-- ends the POST route for creating new outfits --}}
+
       <div class="detailsButtonOnCarasoul">  {{!-- start of BOTH details buttons --}}
           <button type="button" class="btn formButtonStyle defaultButtonHover createOutfitDetailsAddiitons">
             <a id="topDetail" class="coloredLink" href="/clothing/{{theSpecifics._id}}">Top Details</a>
@@ -99,13 +99,17 @@
             <a id="bottomDetail" class="coloredLink" href="/clothing/{{theSpecifics._id}}">Bottom Details</a>
           </button>
       </div>  {{!-- end of BOTH details buttons --}}
-{{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
-  <div class="form-group outfitAddDate">
+
+  <div class="form-group outfitAddDate"> {{!-- start of BOTH date add --}}
     <label class="outfitAddDateLabel" for="exampleInputPassword1">Never lose track of when you wear what! Tag this outfit to your "Style" Calendar now.</label>
     <input class="outfitAddDateInput" type="date" class="form-control" id="exampleInputPassword1" name="lastWorn" value="{{theClothing.lastWorn}}">
-  </div>
+  </div>  {{!-- start of BOTH date add --}}
 
-</div>  {{!-- end of container for buttons and date add --}}
+  </div>  {{!-- end of container for buttons and date add --}}
+{{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
 
 
+
+
+</div>
 
