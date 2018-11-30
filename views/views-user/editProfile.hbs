@@ -24,8 +24,8 @@
 
 {{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
 
-
-<div class="formStylingDefaultEdit">
+<div class="horizontalBackground editAddOns">
+<div class="formStylingDefaultEdit editPageEdits">
 <form action="/profile/{{theLoggedinUser._id}}/update" method="POST" enctype="multipart/form-data">
     <h3>Edit your Profile</h3><br><br>
 
@@ -56,17 +56,19 @@
     <input type="text" class="form-control" id="exampleInputPassword1" name="userEmail" value="{{theLoggedinUser.userEmail}}">
   </div>
 
- <button type="submit" class="btn btn-primary formButtonStyle">Save Changes</button>
+<div class="editProfileButtons">
+ <button type="submit" class="btn btn-primary formButtonStyle editProfileChanges">Save Changes</button>
  </form>
-
 
     <form action="/profile/{{theLoggedinUser._id}}/delete" method="POST">
         <button type="submit" class="btn btn-primary formButtonStyle">Delete Account</button>
     </form>
-
+</div>
 
 </div>
 
 {{#if message}}
 <h4>{{message}}</h4>
 {{/if}}
+
+</div>
