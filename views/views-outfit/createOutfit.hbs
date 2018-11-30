@@ -22,7 +22,6 @@
     </div>
 </nav>  {{!-- end of top nav --}}
 
-
 {{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
 
 
@@ -54,12 +53,8 @@
           </div>
 
 </div>  {{!-- end of TOP carasoul --}}
-
-
 {{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
-
-    
-<div class="forLoopClass carousel-item active carasoulWidthChange">
+<div class="forLoopClass carousel-item active carasoulWidthChange">  {{!-- start of BOTTOMS carasoul --}}
 
         <div class="navButtonsReSize">
           <a id="left_button_lower" class="navArrows carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -80,31 +75,20 @@
         </div>
 
 </div>  {{!-- end of BOTTOMS carasoul --}}
-
-
 {{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
-
-
 </div>
 </div>  {{!-- end of BOTH carasouls --}}
-
-
 {{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
-
-
 <div class="createOutfitFooter">  {{!-- start of container for buttons and date add --}}
 
-<div class="centerCreateOutfitButton">  {{!-- POST route for creating new outfits --}}
+<div class="centerCreateOutfitButton">  {{!-- activates the POST route for creating new outfits --}}
   <form id="outfitCreated" action="/createOutfit" method="POST"> 
       <input type="hidden" id="theSelectedTop" name="theTop">
       <input type="hidden" id="theSelectedBottom" name="theBottom">
-        <button class="btn formButtonStyle defaultButtonHover">Add this Outfit</button>
+        <button type="submit" class="btn formButtonStyle defaultButtonHover">Add this Outfit</button>
   </form>
 </div>
-
 {{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
-
-
       <div class="detailsButtonOnCarasoul">  {{!-- start of BOTH details buttons --}}
           <button type="button" class="btn formButtonStyle defaultButtonHover createOutfitDetailsAddiitons">
             <a id="topDetail" class="coloredLink" href="/clothing/{{theSpecifics._id}}">Top Details</a>
@@ -114,11 +98,7 @@
             <a id="bottomDetail" class="coloredLink" href="/clothing/{{theSpecifics._id}}">Bottom Details</a>
           </button>
       </div>  {{!-- end of BOTH details buttons --}}
-
-
 {{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
-
-
   <div class="form-group outfitAddDate">
     <label class="outfitAddDateLabel" for="exampleInputPassword1">Never lose track of when you wear what! Tag this outfit to your "Style" Calendar now.</label>
     <input class="outfitAddDateInput" type="date" class="form-control" id="exampleInputPassword1" name="lastWorn" value="{{theClothing.lastWorn}}">

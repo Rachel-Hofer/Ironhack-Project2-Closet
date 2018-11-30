@@ -37,7 +37,7 @@ router.post('/createOutfit', uploadCloud.single('path') , (req, res, next) => {
 router.get('/myOutfits', (req, res, next) => {
   Outfits.find().populate('top').populate("bottom")
   .then((allOutfits)=>{
-    res.render('views-outfit/all', {allOutfits, theUser: req.user})
+    res.render('views-outfit/all', {allOutfits, user: req.user})
 })
   .catch((err)=>{
     next(err);

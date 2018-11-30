@@ -13,5 +13,4 @@ router.get('/api/outfits', (req, res, next)=>{
   })
 })
 
-
 module.exports = router;

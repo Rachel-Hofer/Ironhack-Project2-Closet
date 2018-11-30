@@ -70,6 +70,10 @@
 
 .userHomeRowOnePicLinks {
   display: flex;
+  justify-content: space-evenly; }
+
+.userHomeRowTwoPicLinks {
+  display: flex;
   justify-content: space-evenly;
   margin-top: 5%; }
 
@@ -197,5 +201,12 @@
   color: #00264d;
   filter: alpha(opacity=100);
   opacity: 1; }
+
+.backgroundClass {
+  background-color: #e6f3ff;
+  padding-top: 3%;
+  margin-top: 3%;
+  padding-bottom: 3%;
+  border: 2px solid #00264d; }
 
 /*# sourceMappingURL=profile.css.map */
