@@ -25,41 +25,32 @@
 
 {{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
 
-  {{#each allOutfits}}
-  <div id="holdsTheOutfit" name="fullOutfit">
-  <img src="{{this.top.image}}">
-  <img src="{{this.bottom.image}}">
-  </div>
-  {{/each}}
+
 
 <div id="carouselExampleControls" class="carousel slide closetLargeCarousel" data-ride="carousel">
   <div id="toManipulate" class="carousel-inner">
-    <div class="forLoopClass carousel-item active">
+    <div class="forLoopClass carousel-item active outfitViewAddOns">
 
   <div class="carasoulNavButtons">
-    <a id="left_button" class="navArrows carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <a id="left_button_outfits" class="navArrows carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
     </a>
   </div>
 
-    <div id="topsDiv">
-      <span id="theImageHolder" class="clothingImg"></span>
+    <div id="outfitViewAddOns">
+      <span id="theImageHolderOutfits" class="clothingImg"></span>
     </div>
 
-  <a id="right_button" class="navArrows carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+  <a id="right_button_outfits" class="navArrows carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
 
-</div>
-</div>
-</div>
-
-
-
-
-
   <a href="/createOutfit">
-  <button type="button" class="btn btn-primary formButtonStyle">Create New Outfit</button>  
+  <button type="button" class="btn btn-primary formButtonStyle createButton">Create New Outfit</button>  
   </a>
+
+</div>
+</div>
+</div>

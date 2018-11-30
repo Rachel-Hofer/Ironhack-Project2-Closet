@@ -2,7 +2,7 @@ const express = require('express');
 const router  = express.Router();
 const Clothing   = require("../models/Clothing");
 
-// Takes you to your CLoset main page (/)
+// Takes you to your Closet main page (/)
 router.get('/closet', (req, res, next) => {
   Clothing.find()
       .then((allClothing)=>{

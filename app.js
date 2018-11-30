@@ -81,6 +81,6 @@ app.use('/', require('./routes/clothing'));
 app.use('/', require('./routes/closets'));
 app.use('/', require('./routes/outfits'));
 app.use('/', require('./routes/clothingAPI'));
-
+app.use('/', require('./routes/outfitAPI'));
 
 module.exports = app;
