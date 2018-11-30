@@ -77,7 +77,6 @@ router.post('/clothing/:theID/addDate', (req, res, next)=>{
 
 })
 
-
 // GET Takes you to the remove Clothing page (/removeClothing)
 router.post('/clothing/:theID/delete', (req, res, next)=>{
   Clothing.findByIdAndRemove(req.params.theID)

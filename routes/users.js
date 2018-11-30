@@ -60,7 +60,6 @@ router.get('/signup', (req, res, next) => {
            })
   }) // end of signup POST
 
-
 // Takes you to the Login Page (/login)
 router.get('/login', (req, res, next) => {
     res.render('views-user/login')
@@ -132,15 +131,16 @@ router.get('/logout', (req, res, next)=>{
 })
 
 
-
-
-
-
-
-
-
-
-
+router.post('/profile/:theID/delete', (req, res, next)=>{
+  User.findByIdAndRemove(req.params.theID)
+    .then(()=>{
+      res.redirect('/');
+  })
+    .catch((err)=>{
+      console.log(err);
+      next(err);
+  })
+})
 
 
   module.exports = router;

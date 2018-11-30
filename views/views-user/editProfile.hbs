@@ -11,10 +11,10 @@
 
     <div class="styleLoginProfile">
         <div class="btn-group">
-          <button type="button" class="btn dropdown-toggle addedStyle formButtonStyle coloredLink defaultButtonHover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{user.firstName}}'s Menu</button>
+          <button type="button" class="btn dropdown-toggle addedStyle formButtonStyle coloredLink defaultButtonHover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{theLoggedinUser.firstName}}'s Menu</button>
             <div class="dropdown-menu dropdown-menu-right menuDefaultDropdownStyles">
-              <a class="dropdown-item topLinkAddOns dropDownHoverDefault" href="/userHome">{{user.firstName}}'s Home</a>
-              <a class="dropdown-item bottomLinkAddOns dropDownHoverDefault" href="/profile">{{user.firstName}}'s Profile</a>
+              <a class="dropdown-item topLinkAddOns dropDownHoverDefault" href="/userHome">{{theLoggedinUser.firstName}}'s Home</a>
+              <a class="dropdown-item bottomLinkAddOns dropDownHoverDefault" href="/profile">{{theLoggedinUser.firstName}}'s Profile</a>
                   <div class="dropdown-divider menuDefaultAddOns"></div>
               <a class="dropdown-item logoutAddOns" href="/">Logout</a>
             </div>
@@ -61,7 +61,7 @@
 
 
     <form action="/profile/{{theLoggedinUser._id}}/delete" method="POST">
-        <button type="submit" class="btn btn-primary formButtonStyle">Delete Item</button>
+        <button type="submit" class="btn btn-primary formButtonStyle">Delete Account</button>
     </form>
 
 
