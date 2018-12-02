@@ -6,12 +6,12 @@ const uploadCloud = require('../config/cloudinary');
 
 const User = require('../models/User');
 
-// GET request to view Signup Page (/signup)
+// GET request for signup view (/signup)
 router.get('/signup', (req, res, next) => {
     res.render('views-user/signup');
   });
 
-// POST request to sign-up
+// POST request to sign-up (/signup)
   router.post('/signup', uploadCloud.single('path') , (req, res, next)=>{
     const username = req.body.username;
     const password = req.body.password;
@@ -60,12 +60,12 @@ router.get('/signup', (req, res, next) => {
            })
   }) // end of signup POST
 
-// Takes you to the Login Page (/login)
+// GET request for Login view (/login)
 router.get('/login', (req, res, next) => {
     res.render('views-user/login')
   });
 
-// need login POST request to login
+// POST request for Login view (/login)
 router.post("/login", passport.authenticate("local", {
   successRedirect: "/userHome",
   failureRedirect: "/login",
@@ -73,24 +73,22 @@ router.post("/login", passport.authenticate("local", {
   passReqToCallback: true
 }));
 
-
-// Takes you to the your userHome Page (/userHome)
+// GET request for userHome view (/userHome)
 router.get('/userHome', (req, res, next) => {
       res.render('views-user/userHome', {user: req.user})
 });
 
-
-// GET request to view profile (/profile)
+// GET request for profile view (/profile)
 router.get('/profile', (req, res, next) => {
   res.render('views-user/profile', {theLoggedinUser: req.user})
 });
 
-// GET request to view update profile (/profile/ID/update)
+// GET request for update profile view (/profile/ID/update)
 router.get('/profile/:theID/update', (req, res, next) => {
   res.render('views-user/editProfile', {theLoggedinUser: req.user})
 });
 
-// POST request to edit/update profile
+// POST request to update profile (/profile/ID/update)
 router.post('/profile/:theID/update', uploadCloud.single('path'), (req, res, next)=>{
   const changes = req.body;
   console.log("this should be req.body", changes)
@@ -110,7 +108,7 @@ router.post('/profile/:theID/update', uploadCloud.single('path'), (req, res, nex
   })
 })
 
-
+// POST request to ADD date to clothing (/clothing/._id/addDate)
 router.post('/clothing/:theID/addDate', (req, res, next)=>{
   Clothing.findByIdAndUpdate(req.params.theID, {$push: {lastWorn: req.body.lastWorn}})
   .then((response)=>{
@@ -123,14 +121,13 @@ router.post('/clothing/:theID/addDate', (req, res, next)=>{
 
 })
 
-
-// Logs you out -> takes you to the your Home page (/)
+// GET request 
 router.get('/logout', (req, res, next)=>{
   req.logout()
   res.redirect('/');
 })
 
-
+// POST request
 router.post('/profile/:theID/delete', (req, res, next)=>{
   User.findByIdAndRemove(req.params.theID)
     .then(()=>{

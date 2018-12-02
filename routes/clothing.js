@@ -67,17 +67,17 @@ router.post('/clothing/:theID/update', uploadCloud.single('path'), (req, res, ne
 })
 
 // POST request to ADD date to clothing (/clothing/._id/addDate)
-router.post('/clothing/:theID/addDate', (req, res, next)=>{
-  Clothing.findByIdAndUpdate(req.params.theID, {$push: {lastWorn: req.body.lastWorn}})
-  .then((response)=>{
-      res.redirect('/clothing/'+ response._id);
+// router.post('/clothing/:theID/addDate', (req, res, next)=>{
+//   Clothing.findByIdAndUpdate(req.params.theID, {$push: {lastWorn: req.body.lastWorn}})
+//   .then((response)=>{
+//       res.redirect('/clothing/'+ response._id);
 
-  })
-  .catch((err)=>{
-      next(err)
-  })
+//   })
+//   .catch((err)=>{
+//       next(err)
+//   })
 
-})
+// })
 
 // GET request for DELETE clothing view (/delete)
 router.post('/clothing/:theID/delete', (req, res, next)=>{
