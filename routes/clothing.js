@@ -91,7 +91,7 @@ router.post('/clothing/:theID/delete', (req, res, next)=>{
   })
 })
 
-// GET Takes you to the Clothing detail page (clothing/ID)
+// GET for DETAILS clothing view (/clothing/._id)
 router.get('/clothing/:theID', (req, res, next)=>{
  
   Clothing.findById(req.params.theID)
