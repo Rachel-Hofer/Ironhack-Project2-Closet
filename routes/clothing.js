@@ -5,12 +5,12 @@ const uploadCloud = require('../config/cloudinary');
 const Clothing = require("../models/Clothing");
 
 
-// GET Takes you to the create new Clothing page (/clothing) 
+// GET request for create clothing view (/clothing) 
 router.get('/clothing', (req, res, next) => {
   res.render('views-clothing/create', {user: req.user});
 });
 
-// POST request to create new clohting (/clothing/:_id)
+// POST request to create new clothing (/clothing)
 router.post('/clothing', uploadCloud.single('path') , (req, res, next) => {
   const newClothing = {
     category:req.body.category,
@@ -36,7 +36,7 @@ router.post('/clothing', uploadCloud.single('path') , (req, res, next) => {
     })
 })
 
-// Takes you to the edit Clothing page ()
+// GET request for EDIT clothing view (/clothing/._id/update)
 router.get('/clothing/:theID/update', (req, res, next)=>{
   Clothing.findById(req.params.theID)
     .then((theClothing)=>{
@@ -48,6 +48,7 @@ router.get('/clothing/:theID/update', (req, res, next)=>{
   })
 })
 
+// POST request to EDIT clothing (/clothing/._id/update)
 router.post('/clothing/:theID/update', uploadCloud.single('path'), (req, res, next)=>{
   const changes = req.body;
 
@@ -65,6 +66,7 @@ router.post('/clothing/:theID/update', uploadCloud.single('path'), (req, res, ne
   })
 })
 
+// POST request to ADD date to clothing (/clothing/._id/addDate)
 router.post('/clothing/:theID/addDate', (req, res, next)=>{
   Clothing.findByIdAndUpdate(req.params.theID, {$push: {lastWorn: req.body.lastWorn}})
   .then((response)=>{
@@ -77,7 +79,7 @@ router.post('/clothing/:theID/addDate', (req, res, next)=>{
 
 })
 
-// GET Takes you to the remove Clothing page (/removeClothing)
+// GET request for DELETE clothing view (/delete)
 router.post('/clothing/:theID/delete', (req, res, next)=>{
   Clothing.findByIdAndRemove(req.params.theID)
     .then(()=>{

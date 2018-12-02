@@ -1,3 +1,9 @@
+// <><><><><><><><><><><><><><><><><><><><><><><><><><>
+//     FrontEnd - JAVASCRIPT
+//     url: (/createOutfit)
+//     hbs: views-outfit/createOutfit.hbs
+// <><><><><><><><><><><><><><><><><><><><><><><><><><>
+
 $(document).ready(function() { // when the document is loaded
   
   let tops;
