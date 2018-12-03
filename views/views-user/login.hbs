@@ -1,6 +1,7 @@
 <div class="closetBackground">  {{!-- start of "body" background image tag --}}
 
-<nav id="header">  {{!-- nav bar: some variation of this will show in every view. login page: About Us, Features, Contact Us --}}
+{{!-- top nav bar --}}
+<nav id="header">  
       <div class="styleHeader">
         <a class="defaultNavLabelStyle threeLinkSpacing" href="">About Us</a>
           <span class="seperators">|</span>
@@ -13,38 +14,33 @@
         <p class="account-message addedStyle">Not yet a member?<br>
         <a class="defaultNavLabelStyle" href="/">Sign-Up Here</a></p>
       </div>
-</nav>
+</nav>  {{!-- end of top nav bar --}}
+{{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
 
 <img class="companyLogoHeader" src="/images/allWhiteLogo.png">  {{!-- logo: position absolute in signup/login view only: to create overlap --}}
 
-<div class="formStylingDefault formStylingAdditionToDefault">  {{!-- div that holds header of signup form and signup form --}}
+  <div class="formStylingDefault formStylingAdditionToDefault">  {{!-- div that holds header of login header/form --}}
     <h1>Login</h1>
 
-{{!-- bootstrap form with personalized styling added --}}
-<form action="/login" method="POST">
-{{!-- takes the action from the /login POST route in users.js line 71 --}}
+    {{!-- bootstrap form with personalized styling added --}}
+    <form action="/login" method="POST">
+    {{!-- takes the action from the /login POST route in users.js line 71 --}}
 
-  <div class="form-group">  {{!-- div that holds username label/input of login form --}}
-    <label for="exampleInputEmail1">Username:</label>
-    <input type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username" name="username" required>
-    <small id="emailHelp" class="form-text text-muted">We will never share your email with anyone else.</small>
-  </div>
+      <div class="form-group">  {{!-- div that holds username label/input of login form --}}
+        <label for="exampleInputEmail1">Username:</label>
+        <input type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username" name="username" required>
+        <small id="emailHelp" class="form-text text-muted">We will never share your email with anyone else.</small>
+      </div>
 
-  <div class="form-group">  {{!-- div that holds password label/input of login form --}}
-    <label for="exampleInputPassword1">Password:</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" required>
-  </div>
+      <div class="form-group">  {{!-- div that holds password label/input of login form --}}
+        <label for="exampleInputPassword1">Password:</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" required>
+      </div>
 
-  <button type="submit" class="btn btn-primary formButtonStyle">Login</button>  {{!-- button that SUBMITS the form--}}
+        <button type="submit" class="btn btn-primary formButtonStyle">Login</button>  {{!-- button that SUBMITS the form--}}
 
-</form>  {{!-- end of login form --}}
-</div>  {{!-- end of div that holds header of signup form and signup form --}}
+    </form>  {{!-- end of login form --}}
 
+  </div>  {{!-- end of div that holds header of login header/form --}}
 
-
-
-
-
-
-
-</div>  {{!-- end of "body" baclground image tag --}}
+</div>  {{!-- end of "body" background image tag --}}
