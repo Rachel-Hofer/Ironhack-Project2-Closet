@@ -1,5 +1,6 @@
 <div class="closetBackground addedBorder">  {{!-- start of "body" background image tag --}}
 
+{{!-- top nav bar --}}
 <nav class="userHomeHeaderAddOns" id="header">
     <div class="styleHeaderProfile">
         <a class="defaultNavLabelStyle fourLinkSpacing" href="/closet">My Closet</a>
@@ -23,55 +24,56 @@
         </div>
     </div>
 </nav>
-
+{{!-- end of top nav bar --}}
 {{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
 
-{{!-- <div class="horizontalBackground editAddOns"> --}}
-<div class="formStylingDefaultEdit editPageEdits">
-<form action="/profile/{{theLoggedinUser._id}}/update" method="POST" enctype="multipart/form-data">
-    <h3>Edit your Profile</h3><br><br>
 
-{{!-- Image - String--}}
-<div class="form-group">
-    <img src="{{theLoggedinUser.image}}" width="125px">
-    <input type="file" name="path">
-  </div>
+  <div class="formStylingDefaultEdit editPageEdits">
+    <form action="/profile/{{theLoggedinUser._id}}/update" method="POST" enctype="multipart/form-data">
+      <h3>Edit your Profile</h3><br><br>
 
-{{!-- Sub-Type - String --}}
-  <div class="form-group">
-    <label for="exampleInputEmail1">Username:</label>
-    <input class="form-control" id="exampleInputEmail1" name="username" value="{{theLoggedinUser.username}}">
-  </div>
+      {{!-- Image - String--}}
+      <div class="form-group">
+        <img src="{{theLoggedinUser.image}}" width="125px">
+          <input type="file" name="path">
+      </div>
 
-  <div class="form-group">
-    <label for="exampleInputPassword1">First Name:</label>
-    <input type="text" class="form-control" id="exampleInputPassword1" name="firstName" value="{{theLoggedinUser.firstName}}">
-  </div>
+      {{!-- Username - String --}}
+      <div class="form-group">
+        <label for="exampleInputEmail1">Username:</label>
+          <input class="form-control" id="exampleInputEmail1" name="username" value="{{theLoggedinUser.username}}">
+      </div>
 
-  <div class="form-group">
-    <label for="exampleInputPassword1">Last Name:</label>
-    <input type="text" class="form-control" id="exampleInputPassword1" name="lastName" value="{{theLoggedinUser.lastName}}">
-  </div>
+      {{!-- First Name - String--}}
+      <div class="form-group">
+        <label for="exampleInputPassword1">First Name:</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="firstName" value="{{theLoggedinUser.firstName}}">
+      </div>
 
-  <div class="form-group">
-    <label for="exampleInputPassword1">E-mail:</label>
-    <input type="text" class="form-control" id="exampleInputPassword1" name="userEmail" value="{{theLoggedinUser.userEmail}}">
-  </div>
+      {{!-- Last Name - String--}}
+      <div class="form-group">
+        <label for="exampleInputPassword1">Last Name:</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="lastName" value="{{theLoggedinUser.lastName}}">
+      </div>
 
-<div class="editProfileButtons">
- <button type="submit" class="btn btn-primary formButtonStyle editProfileChanges">Save Changes</button>
- </form>
+      {{!-- E-mail - String--}}
+      <div class="form-group">
+        <label for="exampleInputPassword1">E-mail:</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="userEmail" value="{{theLoggedinUser.userEmail}}">
+      </div>
 
-    <form action="/profile/{{theLoggedinUser._id}}/delete" method="POST">
-        <button type="submit" class="btn btn-primary formButtonStyle">Delete Account</button>
+      {{!-- Edit Profile Button--}}
+      <div class="editProfileButtons">
+        <button type="submit" class="btn btn-primary formButtonStyle editProfileChanges">Save Changes</button>
+    
     </form>
-</div>
 
-</div>
+        {{!-- Delete Profile Form/POST reuqest--}}
+        <form action="/profile/{{theLoggedinUser._id}}/delete" method="POST">
+          <button type="submit" class="btn btn-primary formButtonStyle">Delete Account</button>
+        </form>
+      </div>
 
-{{#if message}}
-<h4>{{message}}</h4>
-{{/if}}
+  </div>
 
-{{!-- </div> --}}
 </div>
