@@ -1,6 +1,7 @@
 <div class="closetBackground">  {{!-- start of "body" background image tag --}}
 
-<nav id="header">  {{!-- nav bar: some variation of this will show in every view. signup page: About Us, Features, Contact Us --}}
+{{!-- top nav bar --}}
+<nav id="header">  
       <div class="styleHeader">
         <a class="defaultNavLabelStyle threeLinkSpacing" href="">About Us</a>
           <span class="seperators">|</span>
@@ -14,57 +15,55 @@
         <a class="defaultNavLabelStyle" href="/login">Login Here</a></p>
       </div>
 </nav>
+{{!-- end of top nav bar --}}
+{{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
 
 <img class="companyLogoHeader" src="/images/allWhiteLogo.png">  {{!-- logo: position absolute in signup/login view only: to create overlap --}}
 
-<div class="formStylingDefault">  {{!-- div that holds header of signup form and signup form --}}
-<h1 class="signUpTitle">Get Started Here...</h1>
+  <div class="formStylingDefault">  {{!-- div that holds header of signup form and signup form --}}
+    <h1 class="signUpTitle">Get Started Here...</h1>
 
-{{!-- bootstrap form with personalized styling added --}}
-<form action="/signup" method="POST" enctype="multipart/form-data">  {{!-- start of signup form --}}
-{{!-- takes the action from the /signup POST route in users.js line 15 --}}
+    {{!-- bootstrap form with personalized styling added --}}
+    <form action="/signup" method="POST" enctype="multipart/form-data">  {{!-- start of signup form --}}
+    {{!-- takes the action from the /signup POST route in users.js line 15 --}}
 
-  <div class="form-group">  {{!-- div that holds username label/input of signup form --}}
-    <label for="exampleInputPassword1">Username:</label>
-    <input type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Create Username" name="username" required>
-  </div>
+      <div class="form-group">  {{!-- div that holds username label/input of signup form --}}
+        <label for="exampleInputPassword1">Username:</label>
+        <input type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Create Username" name="username" required>
+      </div>
 
-  <div class="form-group">  {{!-- div that holds password label/input of signup form --}}
-    <label for="exampleInputPassword1">Password:</label>
-    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" required>
-  </div>
+      <div class="form-group">  {{!-- div that holds password label/input of signup form --}}
+        <label for="exampleInputPassword1">Password:</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" required>
+      </div>
 
-  <div class="form-group">  {{!-- div that holds first name label/input of signup form --}}
-    <label for="exampleInputPassword1">First Name:</label>
-    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="First Name" name="firstName" required>
-  </div>
+      <div class="form-group">  {{!-- div that holds first name label/input of signup form --}}
+        <label for="exampleInputPassword1">First Name:</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="First Name" name="firstName" required>
+      </div>
 
-  <div class="form-group">  {{!-- div that holds last name label/input of signup form --}}
-    <label for="exampleInputPassword1">Last Name:</label>
-    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Last Name" name="lastName" required>
-  </div>
+      <div class="form-group">  {{!-- div that holds last name label/input of signup form --}}
+        <label for="exampleInputPassword1">Last Name:</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Last Name" name="lastName" required>
+      </div>
 
-  <div class="form-group">  {{!-- div that holds e-mail label/input of signup form --}}
-    <label for="exampleInputPassword1">E-mail:</label>
-    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="E-mail" name="userEmail" required>
-  </div>
+      <div class="form-group">  {{!-- div that holds e-mail label/input of signup form --}}
+        <label for="exampleInputPassword1">E-mail:</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="E-mail" name="userEmail" required>
+      </div>
 
-  <div class="form-group">  {{!-- div that holds image label/input of signup form --}}
-    <label for="exampleInputPassword1" name="image">Upload Image:</label><br>
-    <input type="file" name="path">
-  </div>
+      <div class="form-group">  {{!-- div that holds image label/input of signup form --}}
+        <label for="exampleInputPassword1" name="image">Upload Image:</label><br>
+        <input type="file" name="path">
+      </div>
 
-  <button type="submit" class="btn btn-primary formButtonStyle">Sign-Up</button>  {{!-- button that SUBMITS the form--}}
+        <button type="submit" class="btn btn-primary formButtonStyle">Sign-Up</button>  {{!-- button that SUBMITS the form--}}
 
-</form>  {{!-- end of signup form --}}
-</div>  {{!-- end of div that holds header of signup form and signup form --}}
+    </form>  {{!-- end of signup form --}}
 
+  </div>  {{!-- end of div that holds header of signup form and signup form --}}
 
-{{#if message}}
-<h4>{{message}}</h4>
-{{/if}}
-
-</div>  {{!-- end of "body" baclground image tag --}}
+</div>  {{!-- end of "body" background image tag --}}
 
 
 
