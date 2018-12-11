@@ -1,7 +1,7 @@
-<div class="closetBackground">  {{!-- start of "body" background image tag --}}
+<div class="closetBackground container">  {{!-- start of "body" background image tag --}}
 
 {{!-- top nav bar --}}
-<nav id="header">  
+<nav id="header" class="row"> 
       <div class="styleHeader">
         <a class="defaultNavLabelStyle threeLinkSpacing" href="">About Us</a>
           <span class="seperators">|</span>
@@ -16,14 +16,15 @@
       </div>
 </nav>  {{!-- end of top nav bar --}}
 {{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
+  <div class="row">
+   <img class="companyLogoHeader col-lg-4 col-md-6 col-sm-12" src="/images/allWhiteLogo.png">  {{!-- logo: position absolute in signup/login view only: to create overlap --}}
+  </div>
 
-<img class="companyLogoHeader" src="/images/allWhiteLogo.png">  {{!-- logo: position absolute in signup/login view only: to create overlap --}}
-
-  <div class="formStylingDefault formStylingAdditionToDefault">  {{!-- div that holds header of login header/form --}}
+  <div class="formStylingDefault col-lg-12 col-md-12 col-sm-12">  {{!-- div that holds header of login header/form --}}
     <h1>Login</h1>
 
     {{!-- bootstrap form with personalized styling added --}}
-    <form action="/login" method="POST">
+    <form class="col-lg-12 col-md-12 col-sm-12" action="/login" method="POST">
     {{!-- takes the action from the /login POST route in users.js line 71 --}}
 
       <div class="form-group">  {{!-- div that holds username label/input of login form --}}

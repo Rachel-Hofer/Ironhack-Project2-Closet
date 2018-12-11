@@ -1,7 +1,7 @@
-<div class="closetBackground">  {{!-- start of "body" background image tag --}}
+<div class="closetBackground container">  {{!-- start of "body" background image tag --}}
 
 {{!-- top nav bar --}}
-<nav id="header">  
+<nav id="header" class="row">  
       <div class="styleHeader">
         <a class="defaultNavLabelStyle threeLinkSpacing" href="">About Us</a>
           <span class="seperators">|</span>
@@ -17,14 +17,15 @@
 </nav>
 {{!-- end of top nav bar --}}
 {{!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --}}
+  <div class="row">
+    <img class="companyLogoHeader col-lg-4 col-md-6 col-sm-12" src="/images/allWhiteLogo.png">  {{!-- logo: position absolute in signup/login view only: to create overlap --}}
+  </div>
 
-<img class="companyLogoHeader" src="/images/allWhiteLogo.png">  {{!-- logo: position absolute in signup/login view only: to create overlap --}}
-
-  <div class="formStylingDefault">  {{!-- div that holds header of signup header/form --}}
-    <h1 class="signUpTitle">Get Started Here...</h1>
+  <div class="formStylingDefault col-lg-12 col-md-12 col-sm-12">  {{!-- div that holds header of signup header/form --}}
+    <h1 class="signUpTitle col-lg-12 col-md-12 col-sm-12">Get Started Here...</h1>
 
     {{!-- bootstrap form with personalized styling added --}}
-    <form action="/signup" method="POST" enctype="multipart/form-data">  {{!-- start of signup form --}}
+    <form class ="col-lg-12 col-md-12 col-sm-12" action="/signup" method="POST" enctype="multipart/form-data">  {{!-- start of signup form --}}
     {{!-- takes the action from the /signup POST route in users.js line 15 --}}
 
       <div class="form-group">  {{!-- div that holds username label/input of signup form --}}
