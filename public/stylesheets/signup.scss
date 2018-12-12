@@ -27,11 +27,13 @@
  }
 
 .companyLogoHeader {  // logo styling on signup page
-  width: 45%;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  width: auto;
+  height: auto;
   border: 2px solid #00264d;
+  z-index: 2;
+  position: absolute;
+  background-color: white;
+  top: 20px;
 }
 
 .formStylingDefault {  // addition to bootstrap styling on signup/login forms
@@ -41,8 +43,8 @@
   justify-content: center;
   border: 2px solid #00264d;
   padding: 1%;
-  margin-top: 9.8vw;
   background-color: #ecf2f9;
+  top: 15vh;
 }
 
 .col-lg-12 {
@@ -55,6 +57,11 @@
   width: 85%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.centerImage {
+  display: flex;
+  justify-content: center;
 }
 
 

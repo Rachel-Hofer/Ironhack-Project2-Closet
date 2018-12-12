@@ -17,11 +17,13 @@
   margin-top: 1vh; }
 
 .companyLogoHeader {
-  width: 45%;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  border: 2px solid #00264d; }
+  width: auto;
+  height: auto;
+  border: 2px solid #00264d;
+  z-index: 2;
+  position: absolute;
+  background-color: white;
+  top: 20px; }
 
 .formStylingDefault {
   display: flex;
@@ -30,8 +32,8 @@
   justify-content: center;
   border: 2px solid #00264d;
   padding: 1%;
-  margin-top: 9.8vw;
-  background-color: #ecf2f9; }
+  background-color: #ecf2f9;
+  top: 15vh; }
 
 .col-lg-12 {
   width: 40%;
@@ -42,5 +44,9 @@
   width: 85%;
   margin-left: auto;
   margin-right: auto; }
+
+.centerImage {
+  display: flex;
+  justify-content: center; }
 
 /*# sourceMappingURL=signup.css.map */
